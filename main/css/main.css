@@ -1,0 +1,65 @@
+/*通用CSS*/
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,form,input.textarea,th,td,select{margin:0px;padding:0px;font-family:simhei}
+em{font-style:normal;}
+li{list-style:none;float:left;}
+a{text-decoration:none;}
+img{border:0px;vertical-align:top}
+input,textarea{outline:none;}
+textarea{resize:none;overflow:auto;}
+body{font-szie:12px;font-family:"simhei"}
+table{border-collapse:collapse;}
+table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-color: #666666;}
+/*通用CSS样式*/
+//省略号
+
+.ellipsis1{width:50px;overflow:hidden;text-overflow:ellipsis;white-space:nowarp;}
+.ellipsis2{
+	width:50px;
+	overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-box-clamp:2;
+}
+@-moz-documentc url-prefix(){
+  .ellipsis2{
+    position: relative; 
+    line-height: 20px;
+    max-height: 40px;/*设置最大高度，加上overflowhidden，正好是两行，使超出部分隐藏*/
+    overflow: hidden;
+   }
+   .ellipsis2::after{
+    content: "..."; 
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    padding-left: 40px;/*以上三个属性，可以后续调整，看要把...放在哪个位置*/
+    background: -webkit-linear-gradient(left, transparent, #fff 55%);
+    background: -o-linear-gradient(right, transparent, #fff 55%);
+    background: -moz-linear-gradient(right, transparent, #fff 55%);
+    background: linear-gradient(to right, transparent, #fff 55%);/*背景色可写成渐变也可写成一样的颜色*/
+  }
+}
+.clear:after{content: "";clear: both;}
+
+
+
+
+
+
+
+
+h2{color:#be3838;}
+/*按钮*/
+.button_stytle{display: inline-block;background:#f25406;color:#fff;padding: 2px 5px;cursor:pointer;}
+
+
+
+
+
+
+
+
+
+
+
