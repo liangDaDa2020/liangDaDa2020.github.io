@@ -1,0 +1,81 @@
+
+#dateBox{
+	width: 652px;
+    margin: 0px auto;
+    border: 1px solid #cecece;
+    padding: 5px;
+}
+#dateBox p{
+	margin:0px;
+	padding:0px;
+}
+#dateBox ul{
+	border-bottom:1px solid #cecece;
+	border-right:1px solid #cecece;
+	margin:0px;
+	padding:0px;
+}
+#dateBox li{
+	list-style: none;
+	width:92px;
+	border:1px solid #cecece;
+	border-bottom:0px;
+	border-right:0px;
+	float:left;
+	text-align:center;
+}
+
+
+
+#dateBox .top{
+	position:relative;
+	width:100%;
+}
+#dateBox .title{
+    color: #0399d8;
+    font-size: 23px;
+	text-align:center;
+	padding:0px;
+	line-height:62px;
+}
+#dateBox .monButton{
+	width:92px;
+	height:36px;
+	border:1px solid #cecece;
+	border-radius:10px;
+	top:10px;
+	position:absolute;
+	text-align:center;
+	line-height:36px;
+	cursor: pointer;
+}
+#dateBox .last{
+	left:10px;
+}
+#dateBox .next{
+	right:10px;
+}
+#dateBox .mon{
+	text-align:center;
+}
+#dateBox li p{
+	padding:0px;
+	margin:0px;
+}
+#dateBox li.week{
+	height:30px;
+	line-height: 30px;
+}
+#dateBox li.day{
+	height:60px;
+	line-height:60px;
+	cursor: pointer;
+}
+#dateBox li.dayNow{
+	height:60px;
+	line-height:60px;
+}
+#dateBox li.pastDay{
+	color:#cdcdcd;
+	cursor: auto;
+}

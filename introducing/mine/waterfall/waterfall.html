@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>瀑布流</title>
+		<link rel="stylesheet" href="../../../main/css/main.css"/>
+		<style>
+			*{margin:0px;padding:0px;}
+			#waterfallBox{width:1236px;height:auto;margin:10px auto;}
+			ul{float:left;}
+			li{position:relative;border:1px solid #ddd;width:400px;overflow: hidden;margin-right:10px;margin-bottom:10px;}
+			img{width:100%;}
+		</style>
+	</head>
+	<body>
+			<div id="waterfallBox">
+				<ul>
+					<li>
+						<img src="images/a1.jpg"/>
+					</li>
+					<li>
+						<img src="images/bg1.jpg"/>
+					</li>
+					<li>
+						<img src="images/a2.jpg"/>
+					</li>
+				</ul>
+				<ul>
+					
+					<li>
+						<img src="images/bg2.jpg"/>
+					</li>
+					<li>
+						<img src="images/a3.jpg"/>
+					</li>
+					<li>
+						<img src="images/bg3.jpg"/>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<img src="images/a4.jpg"/>
+					</li>
+					<li>
+						<img src="images/bg4.jpg"/>
+					</li>
+					<li>
+						<img src="images/a5.jpg"/>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+			</div>
+			<script src="../../../main/js/jquery-3.3.1.min.js"></script>
+			<script>
+				var vHeight=0;//可视高度
+				var gHeight=0; //滚动条高度
+				window.onscroll=function(){
+					var viewHeight=$(window).height();//浏览器时下窗口可视区域高度
+					var scrollY=$(document).scrollTop();//获取滚动条到顶部的垂直高度
+					$("#waterfallBox ul").each(function(){
+						var aLi=$(this).children("li");
+						var lastLi=aLi.eq(aLi.length-1);
+						if(posTop(lastLi) < viewHeight+scrollY){
+							console.log("2354365");
+							//var json=eval('('+str+')')
+						}
+					})
+				}
+				function posTop(obj){
+					var top=0;
+					top+=$(obj).offset().top;
+					obj+=$(obj).offsetParent().offset().top;
+					
+					return top;
+				}
+			</script>
+	</body>
+</html>
