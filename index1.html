@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../main/css/main.css">
+		<link rel="shortcut icon" href="../main/images/home.ico" /> 
+		<link rel="icon" href="../main/images/home.ico" type="image/gif" /> 
+		<link rel="shortcut icon" href="../main/images/home.ico"/>
+	</head>
+	<body>
+<div id="nav"></div>
+<!-------------------HTML--------------------------------------->
+		<h2>HTLM</h2>
+		
+		<h4>页面跳转</h4>
+		<p>1.$("location").attr("href","../index/index.html")</p>
+		<p>2.window.location.href=""</p>
+		<p>3.获得链接:window.loction.href</p>
+		<p>4:window.parent.loction.href</p>
+			HOSTS
+		
+		
+		
+		<h4>数组添加删除</h4>	
+<pre>
+	在尾部添加元素，返回数组长度
+	push()  arr.push("James");
+	在尾部删除元素，返回删除元素
+	pop() arr.pop();
+	
+	在头部添加元素，返回数组长度
+	unshift() arr.unshift(“James”);
+	在头部删除元素，返回删除元素
+	shift() arr.shift();
+</pre>
+
+	<h4>空格</h4>	
+<pre>
+	&nbsp;英文空格
+	&emsp;中文空格
+	text-indet:2em;缩进2个字符
+</pre>
+
+<h4>转义字符</h4>	
+<pre>
+	<xmp><xmp></xmp></xmp>html输出原样标签
+</pre>
+
+<!-------------------CSS--------------------------------------->		
+	<h2>CSS</h2>
+	<h4>样式重置</h4>
+<pre>
+	body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,form,input.textarea,th,td,select{margin:0px;padding:0px;font-family:sinhei}
+	em{font-style:normal;}
+	li{list-style:none;}
+	a{text-decoration:none;}
+	img{border:0px;vertical-align:top}
+	table{border-collapse:clooapse;}
+	input,textarea{outline:none;}
+	textarea{resize:none;overflow:auto;}
+	body{font-szie:12px;font-family:"simhei"}
+	table{border-collapse:collapse;}
+	table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-color: #666666;}
+</pre>
+	
+	<h4>网页图标</h4>
+<pre>
+	<link src/>
+</pre>
+	<h4>兼容</h4>
+<pre>
+	//透明兼容
+	
+</pre>
+
+	<h4>省略</h4>
+	<p class="ellipsis1">1111111111111111111111111111111111111111111111111</p>
+	<p class="ellipsis2">2222222222222222222222222222222222222222222222222</p>
+	
+	<h4>表格</h4>
+	<table >
+		<tr>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+	</table>
+<pre>
+	//基本样式
+	table{border-collapse:collapse;}
+	table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-color: #666666;}
+	//合并
+	rowspan 合并单元格
+	lowspan 和并列
+</pre>
+	
+<!-------------------js--------------------------------------->
+	<a class="title1" href="jsIndex.html">js</a>
+	
+<!-------------------时间--------------------------------------->	
+	<h2>时间</h2>
+	<h4>JQ</h4>
+<pre>
+	//时间格式
+	现在时间 var d=new Date();
+	全年var Year=d.getFullYear()
+	年var yeart=d.getYear();
+	月month=d.getMonth()+1; 
+	日day=d.getDate(); 
+	时h=d.getHours()
+	分m=d.getMinutes();
+	秒s=d.getSeconds();    
+	毫秒ss=d.getMilliseconds();
+	星期w=d.getDay()
+	时间戳d.getTime();
+	if(month<10){ month = "0"+month; } 
+	if(day<10){ day = "0"+day; }
+		
+	//获得时间戳
+	var temp=Date.parse(new Date("209/02/01"));
+		
+	//时间戳
+	<input name="date1" placeholder="请输入时间"/><span id="getDateTemp" class="button_stytle">提交</span>
+	var temp=Date.parse(new Date("2017/12/06 15:25"))//指定时间戳
+	
+	//加减
+	1天86400000
+	
+	//获得时间格式方法
+	<input name="date2" placeholder="请输入时间戳"/><span id="getDateType" class="button_stytle">提交</span>
+</pre>
+			
+			<h4>PHP</h4>
+<pre>
+	//时间戳
+	time();
+	strtotime("2019-08-10");
+	
+	//时间格式
+	date("Y-m-d H:i:s",time());
+	date("w"); 周几
+	
+	//加减
+	$data=strtotime("$data +1 day");
+	1天86400
+</pre>	
+<!-------------------vue--------------------------------------->	
+<h4>vue</h4>
+<a target="_blank" href="templates/vue/index.html">vue</a>
+<!-------------------方法--------------------------------------->	
+	<h2>方法</h2>
+	<h4>瀑布流</h4>
+	<a target="_blck" href="../introducing/mine/waterfall/waterfall.html">瀑布流</a>
+<!-------------------插件--------------------------------------->	
+	<h2>插件</h2>
+	<h4>小导航</h4>
+	<a target="_blank" href="../introducing/mine/nav/nav.html">小导航</a>
+	<h4>轮播</h4>
+	<a target="_blank" href="../introducing/mine/bannerM/index.html">轮播M</a>
+	<h4>日历</h4>
+	<a target="_blank" href="../introducing/mine/calendarM/calendar.html">日历M</a><br/>
+	<a target="_blank" href="../introducing/plugIn/My97Date/index.html">日历插件My97DatePicker2018</a>
+	<h4>二维码</h4>
+	<a target="_blank" href="../introducing/plugIn/code/new 1.html">二维码</a>
+	<h4>图表</h4>
+	<a target="_blank" href="http://echarts.baidu.com/tutorial.html#5%20%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8B%20ECharts?qq-pf-to=pcqq.c2c">链接</a>
+	<a href="">图表</a>
+	
+	
+	<script src="../introducing/js/jquery-3.3.1.min.js"></script>
+	<script src="../main/js/main.js"></script>
+	</body>
+</html>
