@@ -38,9 +38,9 @@ body{height:100%;margin:0;}
 #index .experience .e-time>p{text-align:center;color: #787978;font-size: 16px;line-height: 30px;margin:30px auto;}
 
 #index .works{overflow: hidden;}
-#index .works .item{margin:10px;width:205px;color: #0E4a9b;float: left;}
-#index .works .item img{width:200px;}
-#index .works .item p{text-align: center;margin-top:20px;}
+#index .works .w-item{margin:10px;width:205px;color: #0E4a9b;float: left;}
+#index .works .w-item img{width:200px;}
+#index .works .w-item p{text-align: center;margin-top:20px;}
 
 #index .contact{margin:0 auto;width: 230px;overflow: hidden;}
 #index .contact p{line-height:20px;margin-bottom:10px;text-align: left;color:#787978;font-size: 16px;}
