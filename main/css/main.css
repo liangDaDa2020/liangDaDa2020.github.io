@@ -1,65 +1,47 @@
-/*通用CSS*/
+/*样式重置rest*/
 body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,form,input.textarea,th,td,select{margin:0px;padding:0px;font-family:simhei}
 em{font-style:normal;}
-li{list-style:none;float:left;}
+li{list-style:none;}
 a{text-decoration:none;}
 img{border:0px;vertical-align:top}
+table{border-collapse:clooapse;}
 input,textarea{outline:none;}
 textarea{resize:none;overflow:auto;}
 body{font-szie:12px;font-family:"simhei"}
 table{border-collapse:collapse;}
 table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-color: #666666;}
-/*通用CSS样式*/
-//省略号
 
-.ellipsis1{width:50px;overflow:hidden;text-overflow:ellipsis;white-space:nowarp;}
-.ellipsis2{
-	width:50px;
-	overflow:hidden;
-  text-overflow:ellipsis;
-  display:-webkit-box;
-  -webkit-box-orient:vertical;
-  -webkit-box-clamp:2;
-}
-@-moz-documentc url-prefix(){
-  .ellipsis2{
-    position: relative; 
-    line-height: 20px;
-    max-height: 40px;/*设置最大高度，加上overflowhidden，正好是两行，使超出部分隐藏*/
-    overflow: hidden;
-   }
-   .ellipsis2::after{
-    content: "..."; 
-    position: absolute; 
-    bottom: 0; 
-    right: 0; 
-    padding-left: 40px;/*以上三个属性，可以后续调整，看要把...放在哪个位置*/
-    background: -webkit-linear-gradient(left, transparent, #fff 55%);
-    background: -o-linear-gradient(right, transparent, #fff 55%);
-    background: -moz-linear-gradient(right, transparent, #fff 55%);
-    background: linear-gradient(to right, transparent, #fff 55%);/*背景色可写成渐变也可写成一样的颜色*/
-  }
-}
-.clear:after{content: "";clear: both;}
+/*布局样式*/
+#header{z-index:99}
+.main_warp{width:1190px;margin:0px auto;}
+#con_bar{width:900px;float:left;overflow:hidden;}
+#side_nav{width:168px;overflow:hidden;position:fixed;top:125px;right:10px;}
 
 
 
+/*公共样式*/
+.main{width:1190px;margin:0px auto;}
+.fl{float:left;}
+.fr{float:left}
+.clear{zoom:1}
+.clear:after{content:"";display:block;clear:both;}
 
+/*常用样式*/
+.ellipsis1{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ellipsis2{position: relative;word-break:break-all;overflow: hidden;}
+.ellipsis2::after{content: "..."; position: absolute; bottom: 0; right: 0; padding-left:7px;background-color:#ffffff;_background-color: #fff;}
+.gradient{background: linear-gradient(to top, #F5F5F5, #ffffff);}
+.shadow{box-shadow: 1px 2px 10px #f5f5f5;}
+.trangle_up{width:0px;height:0px;overflow: hidden;border-left:4px solid transparent;border-right: 4px solid transparent;border-bottom:4px solid red;_border-left:4px solid #fff;_border-right:4px solid #fff;}
+.trangle_down{width:0px;height:0px;overflow: hidden;border-left:4px solid transparent;border-right: 4px solid transparent;border-top:4px solid red;_border-left:4px solid #fff;_border-right:4px solid #fff;}
 
+/*header*/
+#header{position: fixed;background:#019875;width:100%;left:0}
+#header .nav{width:1160px;height:50px;overflow:hidden;margin:0px auto;}
+#header h1{float:left;color:#084D08;line-height: 50px;font-size: 26px;margin-right:40px}
+#header .nav-btn{float:left;overflow: hidden;}
+#header .nav a{background:none;font-size:14px;color:#fff;line-height:20px;margin-top: 13px;text-align: center;padding:0px 20px;.width: 80px\9;.padding:0px\9;float:left;display:block}
 
-
-
-h2{color:#be3838;}
-/*按钮*/
-.button_stytle{display: inline-block;background:#f25406;color:#fff;padding: 2px 5px;cursor:pointer;}
-
-
-
-
-
-
-
-
-
-
-
+#header .nav a .after{-moz-transition:width .5s;-webkit-transition:width .5s;content: "";background-color: #fff;height:0;width:0;display: block;margin:0 auto;} /* Safari and Chrome */
+#header .nav .active .after{height:2px;width:50%;}
+#header .nav a:hover .after{height:2px;width:50%;}
