@@ -1,0 +1,110 @@
+/*------------------------手机-----start-----------------*/
+@media screen and (max-width:767px) and (min-width:0px){
+	.video .classificationBox{
+		width:100%;
+		height:35px;
+		border-bottom:solid 1px #000;
+		margin-bottom:25px;
+		position:relative;
+	}
+	.video .classificationText{
+		position: absolute;
+		width:134px;
+		left: 50%;
+		top:5px;
+		margin-left: -67px;
+	}
+	.video .classificationImg{
+		position: absolute;
+		top: 34px;
+		width: 18px;
+		margin-left: -20px;
+		left: 50%!important;
+	}
+	.video .videoBox{
+		margin:15px;				
+		border-radius:3px;
+		overflow:hidden;
+		margin:5px;
+		display: block;
+		border:1px solid #ddd;
+	}
+	
+}
+/*------------------------手机-----end-----------------*/
+/*------------------------平板-----start-----------------*/
+@media screen and (max-width:1200px) and (min-width:768px){
+    .video .classificationBox{
+		width:100%;
+		height:35px;
+		border-bottom:solid 1px #000;
+		margin-top:20px;
+		margin-bottom:50px;
+		position:relative;
+	}
+	.video .classificationText{
+		position:relative;
+		width:150px;
+		top:2px;
+		float:left;
+	}
+	.video .classificationTextOn{
+		width:174px!important;
+		top:0px;
+	}
+	.video .classificationImg{
+		position: absolute;
+		top: 34px;
+		width: 18px;
+		margin-left: -25px;
+		left: 50%;
+	}
+	.video .videoBox{
+		margin:15px;				
+		border-radius:3px;
+		overflow:hidden;
+		display: block;
+		border:1px solid #ddd;
+	}
+}
+/*------------------------平板-----end----------------*/
+/*------------------------pc-----start-----------------*/
+@media screen and (min-width:1200px){
+	.video .classificationBox{
+		width:100%;
+		height:35px;
+		border-bottom:solid 1px #000;
+		margin-top:20px;
+		margin-bottom:50px;
+		position:relative;
+	}
+	.video .classificationText{
+		position:relative;
+		width:150px;
+		top:2px;
+		float:left;
+	}
+	.video .classificationTextOn{
+		width:174px!important;
+		top:0px;
+	}
+	.video .classificationImg{
+		position: absolute;
+		top: 34px;
+		width: 18px;
+		margin-left: -25px;
+		left: 50%;
+	}
+	.video .videoBox{
+		margin:15px;				
+		border-radius:3px;
+		overflow:hidden;
+		display: block;
+		border:1px solid #ddd;
+	}
+}
+/*------------------------pc-----end----------------*/
+.video .videoBox:hover, .video .videoBox:focus{
+	-moz-box-shadow:2px 5px 5px #888 !important; /* 老的 Firefox */
+	box-shadow: 0 2px 5px 0 rgba(14,17,27,.3) !important;
+}

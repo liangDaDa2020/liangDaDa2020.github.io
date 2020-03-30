@@ -1,0 +1,17 @@
+.videoDetails .respondentBox {
+    position: relative;
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 5px 0px;
+}
+.videoDetails .headerPor {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    position: absolute;
+    margin: 5px;
+    top: 7px;
+}
+.videoDetails .respondent {
+    padding-left: 54px;
+}

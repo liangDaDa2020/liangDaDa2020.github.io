@@ -1,0 +1,100 @@
+<div class="content">
+    <!----头部导航手机显示------start------------------------------------------------------------------------------------------------>
+    <nav class="navbar navbar-default visible-xs-block m-0-0" role="navigation" style="position:fixed;width:100%;z-index:2">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse" style="border:0px">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="img/logo.png" style="width:100px">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse" style="position:fixed;z-index:2;width:100%">
+                <ul class="nav navbar-nav white-bg" style="">
+                    <li class="active"><a href="index.html">首页</a></li>
+                    <li><a href="essays.html">随笔</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            书籍 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu" href="books.html">
+                            <li><a href="books.html?id=books1">入门书籍</a></li>
+                            <li><a href="books.html?id=books2">用户研究</a></li>
+                            <li><a href="books.html?id=books3">交互设计</a></li>
+                            <li><a href="books.html?id=books4">视觉设计</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            视频 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="video.html?id=video1">入门视频</a></li>
+                            <li><a href="video.html?id=video2">用户研究</a></li>
+                            <li><a href="video.html?id=video3">交互设计</a></li>
+                            <li><a href="video.html?id=video4">视觉设计</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="question.html">问答</a></li>
+                    <li><a href="mine.html">我的</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!----头部导航手机显示------end------------------------------------------------------------------------------------------------->
+    <!----头部名字搜索框------start------------------------------------------------------------------------------------------------->
+    <div class="seach-m-t-20 container" style="height:70px">
+        <div class="hidden-xs pull-left">
+            <img src="img/logo.png" class="logo">
+        </div>
+        <div class="pull-right col-xs-12 col-sm-8 col-md-4 pcSearch">
+            <form style="padding:15px 10px 0px 10px;position:relative;">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" placeholder="请输入关键字" style="border-radius:20px" ng-model="search">
+                    <span class="glyphicon glyphicon-search pull-right" style="top: -24px;margin-right: 10px;"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!----头部名字搜索框------end------------------------------------------------------------------------------------------------->
+</div>
+<!----导航pc显示------Start------------------------------------------------------------------------------------------------->
+<div class="hidden-xs bg-color">
+    <div class="container navPc">
+        <div class="pull-left" id="pageName">
+            <div class="pull-left pageBox">
+                <img class="rectangular pageBacground" ng-class='{"pageOn":pageNum==1?1:0}' src="img/rectangular.png"/>
+                <a class="font-20 aText pageText white" href="index.html"  ng-class='{"blue-color":pageNum==1?1:0}'>首页</a>
+            </diV>
+            <div class="pull-left pageBox">
+                <img class="rectangular pageBacground" ng-class='{"pageOn":pageNum==2?1:0}' src="img/rectangular.png"/>
+                <a href="essays.html" class="font-20 white aText pageText"  ng-class='{"blue-color":pageNum==2?1:0}'>随笔</a>
+            </diV>
+            <div class="pull-left pageBox">
+                <img class="rectangular pageBacground" ng-class='{"pageOn":pageNum==3?1:0}' src="img/rectangular.png"/>
+                <a  href="books.html" class="font-20 white aText pageText"  ng-class='{"blue-color":pageNum==3?1:0}'>书籍</a>
+            </diV>
+            <div class="pull-left pageBox">
+                <img class="rectangular pageBacground" ng-class='{"pageOn":pageNum==4?1:0}' src="img/rectangular.png"/>
+                <a href="video.html" class="font-20 white aText pageText"  ng-class='{"blue-color":pageNum==4?1:0}'>视频</a>
+            </diV>
+            <div class="pull-left pageBox">
+                <img class="rectangular pageBacground" ng-class='{"pageOn":pageNum==5?1:0}' src="img/rectangular.png"/>
+                <a href="question.html" class="font-20 white aText pageText"  ng-class='{"blue-color":pageNum==5?1:0}'>问答</a>
+            </diV>
+        </div>
+        <div class="pull-right" style="padding-top:20px">
+            <a href="mine.html" style="display:block" class="pull-left m-0-10">
+                <img src="img/headerPor.jpg" class="img-circle headPortrait">
+            </a>
+            <a href="" class="white font-20 m-0-10" style="text-decoration:none">登录</a>
+            <a href="" class="white font-20 m-0-10" style="text-decoration:none">注册</a>
+        </div>
+    </div>
+</div>
+<!----导航pc显示------end------------------------------------------------------------------------------------------------->

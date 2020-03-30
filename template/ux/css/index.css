@@ -1,0 +1,80 @@
+/*------------------------手机-----start-----------------*/
+@media screen and (max-width:767px) and (min-width:0px){
+	.home .classificationBox{
+		width:100%;
+		height:35px;
+		border-bottom:solid 1px #000;
+		margin-bottom:25px;
+		position:relative;
+	}
+	.home .classificationText{
+		position: absolute;
+		width:115px;
+		left: 50%;
+		top:5px;
+		margin-left: -60px;
+	}
+	.home .classificationImg{
+		position: absolute;
+		top: 34px;
+		width: 18px;
+		margin-left: -7px;
+		left: 50%;
+	}
+	.home .titleMargin{
+		margin-top:0px
+	}
+}
+/*------------------------手机-----end-----------------*/
+/*------------------------平板-----start-----------------*/
+@media screen and (max-width:1200px) and (min-width:768px){
+    .home .classificationBox{
+		width:100%;
+		height:35px;
+		border-bottom:solid 1px #000;
+		margin-top:20px;
+		margin-bottom:50px;
+		position:relative;
+	}
+	.home .classificationText{
+		position: absolute;
+		width:158px;
+		left: 50%;
+		top:0px;
+		margin-left: -90px;
+	}
+	.home .classificationImg{
+		position: absolute;
+		top: 34px;
+		width:18px;
+		margin-left: -13px;
+		left: 50%;
+	}
+}
+/*------------------------平板-----end----------------*/
+/*------------------------pc-----start-----------------*/
+@media screen and (min-width:1200px){
+	.home .classificationBox{
+		width:100%;
+		height:35px;
+		border-bottom:solid 1px #000;
+		margin-top:20px;
+		margin-bottom:50px;
+		position:relative;
+	}
+	.home .classificationText{
+		position: absolute;
+		width:158px;
+		left: 50%;
+		top:0px;
+		margin-left: -90px;
+	}
+	.home .classificationImg{
+		position: absolute;
+		top: 34px;
+		width: 18px;
+		margin-left: -25px;
+		left: 50%;
+	}
+}
+/*------------------------pc-----end----------------*/

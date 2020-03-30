@@ -1,0 +1,59 @@
+/*------------------------手机-----start-----------------*/
+@media screen and (max-width:767px) and (min-width:0px){
+	.leftCenter{
+		padding:0px 0px 20px 0px;
+	}
+	.questionDetails .questionDetailsText{
+		padding-bottom:30px;
+		padding-left:10px;
+		padding-top:4px
+	}
+}
+/*------------------------手机-----end-----------------*/
+/*------------------------平板-----start-----------------*/
+@media screen and (max-width:1200px) and (min-width:768px){
+	.questionDetails .questionText{
+		padding-left:65px;
+	}
+}
+/*------------------------平板-----end----------------*/
+/*------------------------pc-----start-----------------*/
+@media screen and (min-width:1200px){
+	.questionDetails .questionText{
+		padding-left:65px;
+	}
+}
+/*------------------------pc-----end----------------*/
+	.questionDetails .questionDetalistBox{
+		padding: 10px 10px 40px 20px;
+		background:#f9f9f9
+	}
+	.questionDetails .questionDetails{
+		margin-top:10px;
+		margin-bottom:5px;
+		line-height:26px;
+	}
+	.questionDetails .respondentBox{
+		position:relative;
+		background:#f9f9f9;
+		padding: 20px;
+		margin:5px 0px
+	}
+	.questionDetails .respondent{
+		padding-left:54px;
+	}
+	.questionDetails .mineBox{
+		width:85%;
+		background:#f5f5f5;
+		margin:20px auto;
+		position:relative;
+		padding:10px 0px;
+	}
+	.questionDetails .headerPor{
+		width:40px;
+		height:40px;
+		border-radius:100%;
+		position:absolute;
+		margin:5px;
+		top:7px;
+	}

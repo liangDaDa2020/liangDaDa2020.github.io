@@ -1,0 +1,25 @@
+<!----内容right显示------start------------------------------------------------------------------------------------------------->
+<!--<div id="contenRight" class="col-sm-3 hidden-xs hidden-sm clearfix contentRight">
+    <div class="white-bg m-20-0 informationBorder" ng-repeat="a in information">
+        <p class="bg-color white font-18 text-center m-0-0 informationTop">{{a.title}}</p>
+        <p class="font-16 m-0-0 informationContent ellipsis">1.{{a.content1}}</p>
+        <p class="font-16 m-0-0 informationContent ellipsis">2.{{a.content2}}</p>
+        <p class="font-16 m-0-0 informationContent ellipsis">3.{{a.content3}}</p>
+        <p class="font-16 m-0-0 informationContent ellipsis">4.{{a.content4}}</p>
+    </div>
+</div>-->
+<div id="contenRight" class="col-sm-2 hidden-xs hidden-sm clearfix contentRight">
+    <div style="">
+        <div ng-repeat="a in information" style="border:1px solid #f9f9f9">
+            <p style="border-left:5px solid #1384bf;padding-left: 12px;background:#f9f9f9;padding-top:5px;padding-bottom:5px" class="font-16 blue-color">
+
+                {{a.title}}
+            </p>
+            <p class="m-b-5 ellipsis informationContent">1.{{a.content1}}</p>
+            <p class="m-b-5 ellipsis informationContent">2.{{a.content2}}</p>
+            <p class="m-b-5 ellipsis informationContent">3.{{a.content3}}</p>
+            <p class="m-b-5 ellipsis informationContent">4.{{a.content4}}</p>
+        </div>
+    </div>
+</div>
+<!----内容right显示------end------------------------------------------------------------------------------------------------->

@@ -1,0 +1,127 @@
+<!Doctype html>
+<html>
+	<header>
+		<title>终于开始了</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/css.css"/>
+		<link rel="stylesheet" href="css/question.css"/>
+		<script src="js/angular.min.js"></script>
+		<script src="js/jquery-1.12.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/controller/js.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controller/question.js"></script>
+	</header>
+	<body ng-app="homePage"  ng-controller="question" class="question">
+		<div class="content">
+			<top></top>
+<!----内容显示------start------------------------------------------------------------------------------------------------->
+			<div class="container contentTop">
+				<div class="row">
+<!----内容left显示------start------------------------------------------------------------------------------------------------->
+					<div class="col-md-9 col-sm-12 col-xs-12 leftCenter">
+						<div class="m-0-15">
+							&nbsp &nbsp
+							<span class="blue-color l-h-20">时间排序</span>
+							&nbsp | &nbsp
+							<span class="l-h-20">热度排序</span>
+							<span class="blue-color pull-right p-3-10 questionButton">我要提问</span>
+						</div>
+						<div class="m-t-20">
+							<div ng-repeat="a in questionObj.list | filter:search">
+								<div class="questionBox">
+									<img ng-src={{a.img}} class="headerPor"/>
+									<div class="questionText">
+										<a ng-href="questionDetails.html?id={{a.id}}">
+											<h4 class="headlineColor ellipsis headline font-16 m-b-5">{{a.title}}</h4>
+											<p class="font-14 questionSimple grey m-b-5">{{a.describe}}</p>
+										</a>
+										<small class="lightGrey">
+											<nobr>
+												<span class="blue-color">{{a.publisher}}</span>
+												&nbsp发表于{{a.time}}
+											</nobr> &nbsp | &nbsp
+											<nobr>
+												<span class="blue-color">{{a.respondents}}</span>
+												&nbsp最后回复
+											</nobr>
+										</small>
+										<div class="pull-right evaluationBox">
+											<i class="m-5-5 lightGrey">
+												{{a.good}}
+												<span class="glyphicon glyphicon-heart lightGrey" ng-click="questionObj.goodClick(a.id)"></span>
+											</i>
+											<a class="m-5-5 grey" href="questionDetails.html">
+												{{a.comments}}
+												<span class="glyphicon glyphicon-comment lightGrey"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+<!----内容left显示------end------------------------------------------------------------------------------------------------->
+<!----内容right显示------start------------------------------------------------------------------------------------------------->
+					<div id="contenRight " class="col-sm-3 hidden-xs hidden-sm clearfix contentRight text-center">
+						<div class="m-20-0 mineBox">
+							<img ng-src={{questionObj.publisherDetails.img}} style="width:80px;height：8px;border-radius: 100%"/>
+							<h2 class="font-20">{{questionObj.publisherDetails.name}}</h2>
+							<p>{{questionObj.publisherDetails.signature}}</p>
+							<div class="row mineDetailsBox">
+								<div class="col-md-4 text-center">
+									<p>
+										<span class="font-18 black">问题</span><br/>
+										{{questionObj.publisherDetails.questionNum}}
+									</p>
+								</div>
+								<div class="col-md-4 text-center">
+									<p>
+										<span class="font-18 black">回复</span><br/>
+										{{questionObj.publisherDetails.comments}}
+									</p>
+								</div>
+								<div class="col-md-4 text-center">
+									<p>
+										<span class="font-18 black">被赞</span><br/>
+										{{questionObj.publisherDetails.good}}
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+<!----内容right显示------end------------------------------------------------------------------------------------------------->
+				</div>
+			</div>
+		</div>
+<!----内容显示------end-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!----提问题表单------Start------------------------------------------------------------------------------------------------->
+				<form role="form"  class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 questionInput">
+					<div class="form-group">
+						<label for="name" class="font-20 l-h-40">
+							问题
+							<span ng-show="questionObj.danger1" class="text-danger font-14 m-0-15">*{{questionObj.danger}}</span>
+						</label>
+						<span class="glyphicon glyphicon-remove-circle deleteButton" id="closeButton"></span>
+						<input id="title" ng-model="questionObj.question.title" type="text" placeholder="请输入主题" class="form-control"  ng-click="questionObj.danger1=0"/>
+						<label for="name" class="font-20 l-h-40">
+							详细内容
+							<span ng-show="questionObj.danger2" class="text-danger font-14 m-0-15">*{{questionObj.danger}}</span>
+						</label>
+						<textarea id="describe" ng-model="questionObj.question.describe" type="textarea" placeholder="请输入详细内容" class="form-control textareaInput"  ng-click="questionObj.danger2=0"></textarea>
+						<div ng-click="questionObj.submit()" class="submitButton">发布问题</div>
+					</div>
+				</form>
+<!----提问题表单------end------------------------------------------------------------------------------------------------->
+<!----foot------start-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<div class="bg-color text-center p-20-0">
+			<p class="white footText">
+				<nobr>网站首页</nobr> &nbsp &nbsp &nbsp <nobr>企业合作</nobr> &nbsp &nbsp &nbsp <nobr>联系我们</nobr> &nbsp &nbsp &nbsp <nobr>常见问题</nobr> &nbsp &nbsp &nbsp <nobr>意见反馈</nobr><br/>
+				<nobr>Copyright © 2017 imooc.com All Rights Reserved </nobr>| <nobr>京ICP备 13046642号-2</nobr>
+			</p>
+		</div>
+<!----foot------end-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	</body>
+</html>

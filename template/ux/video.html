@@ -1,0 +1,59 @@
+<!Doctype html>
+<html>
+	<header>
+		<title>终于开始了</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/css.css"/>
+		<link rel="stylesheet" href="css/video.css"/>
+		<script src="js/angular.min.js"></script>
+		<script src="js/jquery-1.12.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/controller/js.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controller/video.js"></script>
+	</header>
+	<body ng-app="homePage"  ng-controller="video" class="video">
+		<top></top>
+<!----内容显示------start------------------------------------------------------------------------------------------------->
+		<div class="container contentTop">
+			<div class="row">
+<!----内容left显示------start------------------------------------------------------------------------------------------------->
+				<div class="col-md-10 col-sm-12 col-xs-12 leftCenter">
+					<div class="classificationBox hidden-xs">
+						<img ng-src="img/video/category1.png" class="classificationText classificationTextOn" ng-click="videoObj.category('a')"/>
+						<img ng-src="img/books/category2.png" class="classificationText" ng-click="videoObj.category('b')"/>
+						<img ng-src="img/books/category3.png" class="classificationText" ng-click="videoObj.category('c')"/>
+						<img ng-src="img/books/category4.png" class="classificationText" ng-click="videoObj.category('d')"/>
+						<img src="img/triangle.jpg" class="classificationImg" style="left:98px"/>
+					</div>
+					<div class="text-center classificationBox visible-xs-block">
+						<img ng-src="img/video/category{{videoObj.categoryIndex}}.png" class="classificationText"/>
+						<img src="img/triangle.jpg" class="classificationImg"/>
+					</div>
+					<div class="row newBorder m-0-0">
+						<div class="col-sm-4 col-md-3 col-xs-6 text-center pull-left p-0-0"  ng-repeat="a in videoObj.categoryOn | filter:search">
+							<a class="p-0-0 videoBox" href="videoDetails.html?{{a.id}}" style="box-shadow: 0 1px 2px #c5c5c5;border:0px">
+								<img ng-src={{a.img}} class="w-100"/>
+								<p class="font-14 m-0-0 ellipsis" style="color:#333;padding-top:5px">{{a.name}}</p>
+								<p class="font-10 lightGrey">
+									<span>更新至{{a.duration}}</span>
+									&nbsp &nbsp
+									<span>课程时长{{a.update}}</span>
+								</p>
+							</a>
+						</div>
+						<hr class="visible-xs-block segmentation"></hr>
+					</div>
+				</div>
+<!----内容left显示------end------------------------------------------------------------------------------------------------->
+<!----内容right显示------start------------------------------------------------------------------------------------------------->
+				<right></right>
+<!----内容right显示------end------------------------------------------------------------------------------------------------->
+			</div>
+		</div>
+<!----内容显示------end-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<bottom></bottom>
+	</body>
+</html>

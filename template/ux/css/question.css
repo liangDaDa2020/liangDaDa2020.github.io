@@ -1,0 +1,124 @@
+/*------------------------手机-----start-----------------*/
+@media screen and (max-width:767px) and (min-width:0px){
+	.leftCenter{
+		padding:0px 0px 20px 0px;
+	}
+	.question .questionText{
+		padding-bottom:30px;
+		padding-left:10px;
+		padding-top:4px
+	}
+	.question .headline{
+		margin-left:44px;
+	}
+	.question .questionSimple{
+		margin-top:20px;
+		max-height:80px;
+		overflow:hidden;
+	}
+	.question .evaluationBox{
+		margin-top:10px;
+	}
+	.question .questionInput{
+		z-index:10;
+		position:fixed;
+		background:#fff;
+		border:2px solid #cdcdcd;
+		top:0px;
+		padding:10px;
+		height:100%;
+		display:none;
+	}
+}
+/*------------------------手机-----end-----------------*/
+/*------------------------平板-----start-----------------*/
+@media screen and (max-width:1200px) and (min-width:768px){
+	.question .questionText{
+		padding-left:65px;
+	}
+	.question .questionInput{
+		z-index:10;
+		position:fixed;
+		background:#fff;
+		border:2px solid #cdcdcd;
+		top:0px;
+		padding:10px;
+		height:600px;
+		top:50%;
+		margin-top:-300px;
+		display:none;
+	}
+}
+/*------------------------平板-----end----------------*/
+/*------------------------pc-----start-----------------*/
+@media screen and (min-width:1200px){
+	.question .questionText{
+		padding-left:65px;
+	}
+	.question .questionInput{
+		z-index:10;
+		position:fixed;
+		background:#fff;
+		border:2px solid #cdcdcd;
+		top:0px;
+		padding:10px;
+		height:600px;
+		top:50%;
+		margin-top:-300px;
+		display:none;
+	}
+}
+/*------------------------pc-----end----------------*/
+	.question .questionBox{
+		position:relative;
+		background:#f9f9f9;
+		padding:10px;
+		margin:5px 0px
+	}
+	.question .mineBox{
+		background:#f9f9f9;
+		padding:30px 0px
+	}
+	.question .mineDetailsBox{
+		width:85%;
+		background:#f5f5f5;
+		margin:20px auto;
+		position:relative;
+		padding:10px 0px;
+	}
+	.question .questionButton{
+		margin-top:-3px;
+		border:1px solid #1384bf;
+		border-radius:3px;
+	}
+	.question .questionButton:hover{
+		background:#1384bf!important;
+		color:#fff!important;
+	}
+	.question .headerPor{
+		width:40px;
+		height:40px;
+		border-radius:100%;
+		position:absolute;
+		margin:5px
+	}
+	.question .submitButton{
+		background:#1384bf;
+		color:#fff;
+		margin:20px auto 20px;
+		width:200px;
+		line-height:40px;
+		font-size:16px;
+		text-align:center;
+		border-radius:4px;
+	}
+	.question .deleteButton{
+		position:absolute;
+		top:10px;
+		right:10px;
+		font-size:20px;
+	}
+	.question .textareaInput{
+		height:300px;
+		resize:none;
+	}

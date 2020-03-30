@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="shortcut icon" href="../main/images/home.ico" /> 
+		<link rel="icon" href="../main/images/home.ico" type="image/gif" /> 
+		<link rel="stylesheet" href="../../main/css/main.css">
+		<link rel="stylesheet" href="../../staticimages/notes/css/notes.css"/>
+	</head>
+	<body>
+	<div id="header">
+		<div class="nav">
+			<h1>LiangDaDa</h1> 
+			<div class="nav-btn">
+				<a id="index" href="../../index.html">首页<span class="after"></span></a>
+				<a id="specification"href="../specification/index_s.html">规范代码<span class="after"></a>
+				<a id="notes" class="active" href="">笔记<span class="after"></a>
+				<a id="project" href="../project/index_p.html">做过<span class="after"></a>
+				<a id="" href="">学过<span class="after"></a>
+				<a id="" href="">想学<span class="after"></a>
+				<a id="" href="">生活<span class="after"></a>
+			</div>
+		</div>
+	</div>
+	<div id="main" class="main_warp">
+		<div id="con_bar">
+			koocv<br>
+			flex<br/>
+			grid<br/>
+			{
+				display:inner-block;
+				width:400px;
+				vertical-algin:top;
+			}
+			<!--wxss start-->
+			<div class="inner" id="inner0">
+				<h1>html</h1>
+				<ul>
+					<li>
+						<h2></h2>
+						<div>
+							
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--wxss end-->
+			<!--html start-->
+			<div class="inner" id="inner0">
+				<h1>html</h1>
+				<h4>ICO</h4>
+				<xmp>
+					<link rel="shortcut icon" href="../main/images/home.ico" /> 
+				</xmp>
+				<h4>页面跳转</h4>
+				<p>1.$("location").attr("href","../index/index.html")</p>
+				<p>2.window.location.href=""</p>
+				<p>3.获得链接:window.loction.href</p>
+				<p>4:window.parent.loction.href</p>
+				<p>HOSTS</p>
+				<h4>数组添加删除</h4>	
+				<pre>
+					在尾部添加元素，返回数组长度
+					push()  arr.push("James");
+					在尾部删除元素，返回删除元素
+					pop() arr.pop();
+					
+					在头部添加元素，返回数组长度
+					unshift() arr.unshift(“James”);
+					在头部删除元素，返回删除元素
+					shift() arr.shift();
+				</pre>
+				<h4>空格</h4>	
+				<pre>
+					&nbsp;英文空格
+					&emsp;中文空格
+					text-indet:2em;缩进2个字符
+				</pre>
+						
+				<h4>转义字符</h4>	
+				<pre>
+					<xmp><xmp></xmp></xmp>html输出原样标签
+				</pre>
+			</div>
+			<!--html end-->
+			<!--css start-->
+			<div class="inner" id="inner1">
+				<h1>css</h1>
+				transform:.8
+				<ul>
+					<li>
+						<h3>1.代码规范 </h3>
+						<div>
+							<a href="../specification/index_s.html" target="_blank" title="CSS代码规范">CSS代码规范</a>
+						</div>
+					</li>
+					<li>
+						<h3>1.公共样式 </h3>
+						<div>
+							<pre>
+								.header{style:hidden;}
+								.warp{width:1290px;margin:0px auto;}
+								.fl{float:left;}
+								.fr{float:left}
+								.clear{clear: both;}
+							</pre>
+						</div>
+					</li>
+					<li>
+						<h3>2.重置样式 </h3>
+						<div>
+							<pre>
+								body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,form,input.textarea,th,td,select{margin:0px;padding:0px;font-family:sinhei}
+								em{font-style:normal;}
+								li{list-style:none;}
+								a{text-decoration:none;}
+								img{border:0px;vertical-align:top}
+								table{border-collapse:clooapse;}
+								input,textarea{outline:none;}
+								textarea{resize:none;overflow:auto;}
+								body{font-szie:12px;font-family:"simhei"}
+								table{border-collapse:collapse;}
+								table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-color: #666666;}
+							</pre>
+						</div>
+					</li>
+					<li>
+						<h3>3.常用样式 </h3>
+						<div>
+							<dl>
+								<dd>
+									浮动
+									clear:both;
+									overflow:hidden
+								</dd>
+								<dd>
+									渐变
+									<div class="gradient" style="width:100px;height:10px;"></div>
+									<pre>
+										.gradient{background: linear-gradient(to top, #fff, #000);}
+									</pre>
+								</dd>
+								<dd>
+									省略
+									<p class="ellipsis1" style="height:24px;width:100px;font-size: 12px;line-height: 12px;;">1111111111111111111111111111111111111111111111111</p>
+									<pre>
+										.ellipsis1{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+									</pre>
+									<p class="ellipsis2" style="height:24px;width:100px;font-size: 12px;line-height: 12px;;">2222222222222222222222222222222222222222222222222</p>
+									<pre>
+										.ellipsis2{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+									</pre>			
+								</dd>
+								<dd>
+									阴影
+									<div class="shadow" style="width:100px;height:10px;background:#fff;border:1px solid #f5f5f5"></div>
+									<pre>
+										box-shadow: 1px 2px 10px #f5f5f5;
+									</pre>
+								</dd>
+								<dd>
+									三角形
+									<span class="trangle_up"></span><span class="trangle_down"></span>
+									<pre>
+										.trangle_up{width:0px;height:0px;overflow: hidden;border-left:4px solid transparent;border-right: 4px solid transparent;border-bottom:4px solid red;_border-left:4px solid #fff;_border-right:4px solid #fff;}
+										.trangle_down{width:0px;height:0px;overflow: hidden;border-left:4px solid transparent;border-right: 4px solid transparent;border-top:4px solid red;_border-left:4px solid #fff;_border-right:4px solid #fff;}
+									</pre>
+								</dd>
+							</dl>
+						</div>
+					</li>
+					<li>
+						<h3>3.常用样式 </h3>
+						<div>
+							浮动
+							clear:both;
+							overflow:hidden
+						</div>
+					</li>
+					<li>
+						<h3>4.hack</h3>
+						<div>
+							<pre>
+								+color:black;ie7
+								<!--  [if IE6]><![endif]-->
+							</pre>
+						</div>
+					</li>
+					<li>
+						<h3>4.兼容 </h3>
+						<div>
+							<pre>
+								ie,谷歌，火狐，op
+								浮动 margin失效
+								png失效
+								透明
+								z-index
+							</pre>
+						</div>
+					</li>
+					<li>
+						<h3>4.表格</h3>
+						<div>
+							<table >
+								<tr>
+									<th>1</th>
+									<th>2</th>
+									<th>3</th>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>2</td>
+									<td>3</td>
+								</tr>
+							</table>
+							<pre>
+								//基本样式
+								table{border-collapse:collapse;}
+								table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-color: #666666;}
+								//合并
+								rowspan 合并单元格
+								lowspan 和并列
+							</pre>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--css end-->
+			<!--js start-->
+			<div class="inner" id="inner2">
+				<h1>js</h1>
+				<ul>
+					<li>
+						<h2>jq弹性运动</h2>
+						<div>	
+						</div>
+					</li>
+					<li>
+						<h2>时间</h2>
+						<div>	
+							<h3>JQ</h3>
+							<pre>
+								//时间格式
+								现在时间 var d=new Date();
+								全年var Year=d.getFullYear()
+								年var yeart=d.getYear();
+								月month=d.getMonth()+1; 
+								日day=d.getDate(); 
+								时h=d.getHours()
+								分m=d.getMinutes();
+								秒s=d.getSeconds();    
+								毫秒ss=d.getMilliseconds();
+								星期w=d.getDay()
+								时间戳d.getTime();
+								if(month<10){ month = "0"+month; } 
+								if(day<10){ day = "0"+day; }
+									
+								//获得时间戳
+								var temp=Date.parse(new Date("209/02/01"));
+									
+								//时间戳
+								<input name="date1" placeholder="请输入时间"/><span id="getDateTemp" class="button_stytle">提交</span>
+								var temp=Date.parse(new Date("2017/12/06 15:25"))//指定时间戳
+								
+								//加减
+								1天86400000
+								
+								//获得时间格式方法
+								<input name="date2" placeholder="请输入时间戳"/><span id="getDateType" class="button_stytle">提交</span>
+							</pre>
+							<h3>php</h3>
+							<pre>
+								//时间戳
+								time();
+								strtotime("2019-08-10");
+								
+								//时间格式
+								date("Y-m-d H:i:s",time());
+								date("w"); 周几
+								
+								//加减
+								$data=strtotime("$data +1 day");
+								1天86400
+							</pre>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--js end-->
+			<!--php start-->
+			<div class="inner" id="inner3">
+				<h1>php</h1>
+				<ul>
+					<li>
+						
+					</li>
+				</ul>
+			</div>
+			<!--php end-->
+			<!--sql start-->
+			<div class="inner" id="inner4">
+				<h1>sql</h1>
+				<ul>
+					<li>
+						
+					</li>
+				</ul>
+			</div>
+			<!--sql end-->
+			<!--框架 start-->
+			<div class="inner" id="inner5">
+				<h1>框架</h1>
+				<ul>
+					<li>
+						<h2>小程序</h2>
+						<div>
+							<a href="../wechat/index.html" title="小程序" target="_blank">链接</a>
+						</div>
+					</li>
+					<li>
+						<h2>vue</h2>
+						<div>
+							<a href="../vue/index.html" title="" target="_blank">链接</a>
+						</div>
+					</li>
+					<li>
+						<h2>node</h2>
+						<div>
+							<a href="" title="" target="_blank">链接</a>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+			<!--框架 end-->
+			<!--插件 start-->
+			<div class="inner" id="inner6">
+				<h1>插件</h1>
+				<h2>插件引入</h2>
+				<ul>
+					<li>
+						<h3>1.小导航</h3>
+						<div>
+							<a class="main_link" target="_blank" title="小导航"  href="../../introducing/plugIn/smint/index.html">小导航首页</a>
+						</div>
+					</li>
+					<li>
+						<h3>2.日历</h3>
+						<div>
+							<a class="main_link" target="_blank" title="日历"  href="http://www.my97.net/">日历首页</a>
+						</div>
+					</li>
+					<li>
+						<h3>3.图表echarts</h3>
+						<div>
+							<a class="main_link" target="_blank" title="图表echarts" href="http://echarts.baidu.com/tutorial.html#5%20%E5%88%86%E9%92%9F%E4%B8%8A%E6%89%8B%20ECharts?qq-pf-to=pcqq.c2c">4.图表echarts</a>
+						</div>
+					</li>
+					<li>
+						<h3>4.二维码</h3>
+						<a class="main_link" target="_blank" title="二维码" href="../../introducing/plugIn/code/index.html">3.二维码</a>
+					</li>
+				</ul>
+				<h2>插件自己</h2>
+				<div>
+					<ul>
+						<li>
+							<h3>1.日历</h3>
+							<a class="main_link" target="_blank" title="日历M" href="../../introducing/mine/calendarM/calendar.html">链接</a>
+						</li>
+						<li>
+							<h3>2.瀑布流</h3>
+							<a class="main_link" target="_blank" title="瀑布流" href="../../introducing/mine/waterfall/waterfall.html">链接</a>
+						</li>
+						<li>
+							<h3>3.轮播</h3>
+							<a class="main_link" target="_blank" title="轮播" href="../../introducing/mine/bannerM/index.html">链接</a>
+						</li>
+						
+					</ul>
+				</div>
+				<h2>方法</h2>
+				<div>
+					
+				</div>
+			</div>
+			<!--插件 end-->
+			<!--其它 start-->
+			<div class="inner" id="inner6">
+				<h1>其它</h1>
+				<ul>
+					<li>
+						<h2>let（变量）与var的区别</h2>
+						<div>
+							A.{}限定不了var声明变量的访问范围。
+							B.let不允许在相同作用域内，重复声明同一个变量
+							C.使用let命令声明变量之前，该变量都是不可用的
+							D.let 配合for循环的独特应用
+							E.splice移除
+						</div>
+						<h2>const常量</h2>
+					</li>
+				</ul>
+			</div>
+			<!--其它 end-->
+		</div>
+		<div id="side_nav">
+			<h2>导航</h2>
+			<p>html</p>
+			<p>css</p>
+			<p>jq</p>
+			<p>php</p>
+			<p>sql</p>
+			<p>框架</p>
+			<p>插件</p>
+			<p>其它</p>
+		</div>
+	</div>
+	
+	<script src="../../introducing/js/jquery-3.3.1.min.js"></script>
+	<script>
+		var pageOn="notes";
+	</script>
+	<script src="../../main/js/main.js"></script>
+	<script src="../../staticimages/notes/js/notes.js"></script>
+	</body>
+</html>

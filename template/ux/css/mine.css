@@ -1,0 +1,117 @@
+/*------------------------手机-----start-----------------*/
+@media screen and (max-width:767px) and (min-width:0px){
+	.mine .minerLeftOptions{
+		float:left;
+		width:33.33%
+	}
+	.mine .leftCenter{
+		padding:0px;
+		margin:0px;
+	}
+	.mine .bookDescribe{
+		height: 81px;
+		overflow: hidden;
+	}
+	.mine .questionText{
+		padding-bottom:30px;
+		padding-left:10px;
+		padding-top:4px
+	}
+	.mine .contentRight{
+		padding-left:0px;
+	}
+	.mine .headline{
+		margin-left:44px;
+	}
+	.mine .questionSimple{
+		margin-top:20px;
+		max-height:80px;
+		overflow:hidden;
+	}
+	.mine .textBox{
+		padding-left:0px
+	}
+}
+/*------------------------手机-----end-----------------*/
+/*------------------------平板-----start-----------------*/
+@media screen and (max-width:1200px) and (min-width:768px){
+	.mine .questionText{
+		padding-left:65px;
+	}
+}
+/*------------------------平板-----end----------------*/
+/*------------------------pc-----start-----------------*/
+@media screen and (min-width:1200px){
+	.mine .questionText{
+		padding-left:65px;
+	}
+}
+/*------------------------pc-----end----------------*/
+.mine .mineIcon{
+	width: 30px;
+    height: 30px;
+    margin-top: -5px;
+    margin-left: 5px;
+}
+.mine .buttonContinue{
+	padding:2px 5px;
+	margin-top: -3px;
+	border: 1px solid #1384bf;
+	border-radius: 3px;
+}
+.mine .buttonContinue:hover{
+	color:#fff!important;
+	background:#1384bf;
+}
+.mine .questionBox{
+	position:relative;
+	background:#f9f9f9;
+	padding:10px;
+	margin:5px 0px
+}
+.mine .headerPor{
+	width:40px;
+	height:40px;
+	border-radius:100%;
+	position:absolute;
+	margin:5px
+}
+.mine .footprintBox{
+	padding: 20px 20px 20px 20px;
+	display:none;
+	background:#f9f9f9;
+}
+.mine .timeline{
+	border-left:2px solid #cdcdcd;
+}
+.mine .footprintTitle{
+	margin-left:15px;font-weight: bold
+}
+.mine .timeDiv{
+	background:#cdcdcd;width:8px;
+	height:8px;
+	border-radius: 100%;
+	position: absolute;
+	top:0px;
+	left:10px;
+}
+.mine .time{
+	position: absolute;
+	top:-5px;
+	left:30px
+}
+/*个人资料*/
+.mine .myProfileBox{
+	padding: 10px 20px 20px 20px;
+	display:none;
+	background:#f9f9f9;
+}
+.mine .myProfileList{
+	height:40px;
+	margin:10px 0px
+}
+.mine .myProfileHeaderPor{
+	width:50px;
+	height:50px;
+	border-radius: 100%;
+}

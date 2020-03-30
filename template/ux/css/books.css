@@ -1,0 +1,88 @@
+/*------------------------手机-----start-----------------*/
+@media screen and (max-width:767px) and (min-width:0px){
+	.books .classificationBox{
+		width:100%;
+		height:35px;
+		border-bottom:solid 1px #000;
+		margin-bottom:25px;
+		position:relative;
+	}
+	.books .classificationText{
+		position: absolute;
+		width:134px;
+		left: 50%;
+		top:5px;
+		margin-left: -67px;
+	}
+	.books .classificationImg{
+		position: absolute;
+		top: 34px;
+		width: 18px;
+		margin-left: -10px;
+		left: 50%;
+	}
+	.books .informationSimple{
+		height:100px;
+		overflow: hidden;
+	}
+}
+/*------------------------手机-----end-----------------*/
+/*------------------------平板-----start-----------------*/
+@media screen and (max-width:1200px) and (min-width:768px){
+    .books .classificationBox{
+		width:100%;
+		height:35px;
+		border-bottom:solid 1px #000;
+		margin-top:20px;
+		margin-bottom:50px;
+		position:relative;
+	}
+	.books .classificationText{
+		position:relative;
+		width:150px;
+		top:2px;
+		float:left;
+	}
+	.books .classificationTextOn{
+		width:174px!important;
+		top:0px;
+	}
+	.books .classificationImg{
+		position: absolute;
+		top: 34px;
+		width: 18px;
+		margin-left: -25px;
+		left: 50%;
+	}
+}
+/*------------------------平板-----end----------------*/
+/*------------------------pc-----start-----------------*/
+@media screen and (min-width:1200px){
+	.books .classificationBox{
+		width:100%;
+		height:35px;
+		border-bottom:solid 1px #000;
+		margin-top:20px;
+		margin-bottom:50px;
+		position:relative;
+	}
+	.books .classificationText{
+		position:relative;
+		width:150px;
+		top:2px;
+		float:left;
+	}
+	.books .classificationTextOn{
+		width:174px!important;
+		top:0px;
+		float:left;
+	}
+	.books .classificationImg{
+		position: absolute;
+		top: 34px;
+		width: 18px;
+		margin-left: -25px;
+		left: 50%;
+	}
+}
+/*------------------------pc-----end----------------*/

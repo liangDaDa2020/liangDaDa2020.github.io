@@ -1,0 +1,94 @@
+<!Doctype html>
+<html>
+	<header>
+		<title>终于开始了</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/css.css"/>
+		<link rel="stylesheet" href="css/questionDetails.css"/>
+		<script src="js/angular.min.js"></script>
+		<script src="js/jquery-1.12.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/controller/js.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/controller/questionDetails.js"></script>
+	</header>
+	<body ng-app="homePage"  ng-controller="questionDetails" class="questionDetails">
+		<div class="content">
+		<top></top>
+<!----内容显示------start------------------------------------------------------------------------------------------------->
+		<div class="container contentTop">
+			<div class="row">
+<!----内容left显示------start------------------------------------------------------------------------------------------------->
+				<div class="col-md-9 col-sm-12 col-xs-12 leftCenter">
+					<div class="questionDetalistBox">
+							<h3 class="headlineColor ellipsis">
+								{{questionDetailsObj.details.title}}
+							</h3>
+							<small>
+								<span class="blue-color">{{questionDetailsObj.details.publisher}}</span> 发表于{{questionDetailsObj.details.time}}
+							</small>
+							<p class="font-15 questionDetails grey">
+								{{questionDetailsObj.details.describe}}
+							</p>
+							<div class="pull-right">
+								<i class="m-5-5 lightGrey">
+									159
+									<span class="glyphicon glyphicon-heart lightGrey"></span>
+								</i>
+								<i class="m-5-5 grey">
+									200
+									<span class="glyphicon glyphicon-comment lightGrey"></span>
+								</i>
+							</div>
+					</div>
+					<div ng-repeat="a in questionDetailsObj.respondent">
+						<div class="respondentBox">
+							<img ng-src={{a.img}} class="headerPor"/>
+							<div class="respondent">
+								<p class="lightGrey m-0-0">
+									<span class="blue-color">{{a.publisher}}</span>
+										&nbsp发表于{{a.time}}
+								</p>
+								<p class="font-14 m-5-0 grey">{{a.describe}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+<!----内容left显示------end------------------------------------------------------------------------------------------------->
+<!----内容right显示------start------------------------------------------------------------------------------------------------->
+				<div id="contenRight" class="col-sm-3 hidden-xs hidden-sm clearfix contentRight text-center">
+					<div style="background:#f9f9f9;padding:30px 0px">
+						<img ng-src="{{questionDetailsObj.details.img}}" style="width:80px;height:80px;border-radius: 100%"/>
+						<h2 class="font-20">{{questionDetailsObj.details.publisher}}</h2>
+						<p>分享经验，交流思想</p>
+						<div class="row mineBox">
+							<div class="col-md-4 text-center">
+								<p>
+									<span class="font-18 black">954</span><br/>
+									问题
+								</p>
+							</div>
+							<div class="col-md-4 text-center">
+								<p>
+									<span class="font-18 black">954</span><br/>
+									回复
+								</p>
+							</div>
+							<div class="col-md-4 text-center">
+								<p>
+									<span class="font-18 black">954</span><br/>
+									被赞
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+<!----内容right显示------end------------------------------------------------------------------------------------------------->
+			</div>
+		</div>
+<!----内容显示------end-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<bottom></bottom>
+	</body>
+</html>

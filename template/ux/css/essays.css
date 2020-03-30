@@ -1,0 +1,77 @@
+/*------------------------手机-----start-----------------*/
+@media screen and (max-width:767px) and (min-width:0px){
+	.essays .classificationBox{
+		width:100%;
+		height:35px;
+		border-bottom:solid 1px #000;
+		margin-bottom:25px;
+		position:relative;
+	}
+	.essays .classificationText{
+		position: absolute;
+		width:74px;
+		left: 50%;
+		top:5px;
+		margin-left: -38px;
+	}
+	.essays .classificationImg{
+		position: absolute;
+		top: 33px;
+		width: 18px;
+		margin-left: -11px;
+		left: 50%;
+	}
+}
+/*------------------------手机-----end-----------------*/
+/*------------------------平板-----start-----------------*/
+@media screen and (max-width:1200px) and (min-width:768px){
+    .essays .classificationBox{
+		width:100%;
+		height:35px;
+		border-bottom:solid 1px #000;
+		margin-top:20px;
+		margin-bottom:50px;
+		position:relative;
+	}
+	.essays .classificationText{
+		position: absolute;
+		width:100px;
+		left: 50%;
+		top:0px;
+		margin-left: -57px;
+	}
+	.essays .classificationImg{
+		position: absolute;
+		top: 34px;
+		width: 18px;
+		margin-left: -19px;
+		left: 50%;
+	}
+}
+/*------------------------平板-----end----------------*/
+/*------------------------pc-----start-----------------*/
+@media screen and (min-width:1200px){
+	.essays .classificationBox{
+		width:100%;
+		height:35px;
+		border-bottom:solid 1px #000;
+		margin-top:20px;
+		margin-bottom:50px;
+		position:relative;
+	}
+	.essays .classificationText{
+		position: absolute;
+		width:100px;
+		left: 50%;
+		top:0px;
+		margin-left: -57px;
+	}
+	.essays .classificationImg{
+		position: absolute;
+		top: 34px;
+		width: 18px;
+		margin-left: -15px;
+		left: 50%;
+	}
+}
+/*------------------------pc-----end----------------*/
