@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>4-4</title>
+		<script src="../../staticimages/vue/vue.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<component :is="tem"></component>
+			<input type="button" value="改变" @click="change"/>
+		</div>
+		<script>
+			var tem1=Vue.component('tem1',{
+				template:'<div v-once>tem1</div>'
+			})
+			var tem2=Vue.component('tem2',{
+				template:'<div >tem2</div>'
+			})
+			var app=new Vue({
+				el:"#app",
+				component:tem1,
+				data:{
+					'tem':'tem1',
+				},
+				methods:{
+					'change':function(){
+						this.tem=this.tem==='tem1'?'tem2':'tem1';
+						console.log(this.tem)
+					}
+				}
+			})
+		</script>	
+	</body>
+</html>

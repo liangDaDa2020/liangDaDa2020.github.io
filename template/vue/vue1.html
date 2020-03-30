@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>vue第一章小练习</title>
+		<script src="../../staticimages/vue/vue.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<input name="add" type="text" v-model="inputVal" />
+			<input type="submit" title="提交" @click="add"/>
+			<ul>
+				<todo-list 
+					v-for="(item,index) in list" 
+					:content="item" 
+					:index="index"
+					@del="deletes"
+				>
+				</todo-list>
+			</ul>
+		</div>
+		<script>
+			var todoList=Vue.component("todoList",{
+				template:'<li  @click="del">{{index}}{{content}}</li>',
+				props:['content','index'],
+				methods:{
+					'del':function(){
+						this.$emit("del",this.index);
+					}
+				}
+				
+			})
+			var app=new Vue({
+				el:"#app",
+				data:{
+					'a':'asdhdfh',
+					'list':[],
+					'inputVal':''
+				},
+				component:todoList,
+				methods:{
+					add:function(){
+						var inputVal=this.inputVal
+						this.list.push(inputVal);
+						this.inputVal="";
+					},
+					deletes:function(index){
+						this.list.splice(index,1);
+					}
+				}
+				
+			})
+		</script>	
+	</body>
+</html>

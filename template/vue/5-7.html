@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>4-4</title>
+		<script src="../../staticimages/vue/vue.js"></script>
+		<style>
+			.fade-enter,.fade-leave-to{opacity: 0;}
+			.fade-enter-active,.fade-leave-active{transition: opacity 3s;}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<fade :show="show">
+				<div slot="hello" key="hello">hello word</div>
+				<div slot="by" key="buy">by word</div>
+			</fade>
+			<input type="button" value="change" @click="change"/>
+		</div>
+		<script>
+			var tem1=Vue.component('fade',{
+				props:['show'],
+				template:`<transition 
+							name="fade" 
+							mode="out-in"
+							@before-enter="beforeEnter"
+							@enter="enter"
+							@after-enter="afertEnter"
+						>
+							<slot name="hello" v-if="show" ></slot>
+							<slot name="by" v-else></slot>
+						</transition>`,
+				methods:{
+					'beforeEnter':function(el){
+						el.style.color='black';
+					},
+					'enter':function(el,done){
+						el.style.color='green';
+						setTimeout(function(){
+							done();
+						},2000)
+					},
+					'afertEnter':function(el){
+						el.style.color='red';
+					}
+				}
+			})
+			var app=new Vue({
+				el:"#app",
+				component:tem1,
+				data:{
+					'show':1
+				},
+				methods:{
+					'change':function(){
+						this.show=this.show==1?0:1
+					}
+				}
+			})
+		</script>	
+	</body>
+</html>

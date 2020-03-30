@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>4-4</title>
+		<script src="../../staticimages/vue/vue.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<tem1>
+				<div slot="header">header</div>
+			</tem1>
+		</div>
+		<script>
+			var tem1=Vue.component('tem1',{
+				template:`<div><slot name="header"></slot>
+							<div>hello word</div>
+							<slot name="footer">默认</slot></div>`,
+				methods:{
+					
+				}
+			})
+			var app=new Vue({
+				el:"#app",
+				component:tem1,
+				data:{
+					
+				},
+				methods:{
+					'handClickDaiv':function(){
+						alert("asdgdfh");
+					}
+				}
+			})
+		</script>	
+	</body>
+</html>

@@ -1,0 +1,444 @@
+<<<<<<< .mine
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../main/css/main.css">
+		<link rel="shortcut icon" href="../main/images/home.ico" /> 
+		<link rel="icon" href="../main/images/home.ico" type="image/gif" /> 
+		<link rel="shortcut icon" href="../main/images/home.ico"/>
+	</head>
+	<body>
+	<div id="header"></div>
+	<div class="main_warp">
+		<!--起步 start-->
+		<div class="inner" id="inner2">
+			<h1>起步</h1>
+			<ul>
+				<li>
+					<pre>
+						1.vue是一套用于构建用户界面的渐进式框架
+						2.var app=new vue({el:'id',data:{},method:{},component:''});
+						3:v-bind==:,v-on:click=@click,v-on=@
+						4.v-for="(item,index) in list"
+						5.v-moddel="inputValue"双向绑定
+						6.mvvm,vue只关注数据层和视图层，控制层由vue处理
+						7.组件，component:{template:'',props:['item']},组件数据绑定
+						A.template=>@click="del",
+						B.组件menthid=>del:function{this.$emit("del2")}
+						C.使用模板@del2="del3";
+						D.父亲method:del3:function(){}
+						8.<a href="vue1.html" target="_blank">第一章练习</a>
+					</pre>
+				</li>
+				<li>
+					<h2>实例</h2>
+					<pre>
+						1.app.$data,app.$el
+					</pre>
+				</li>
+				<li>
+					<h2>计算属性，方法，监听</h2>
+					<pre>
+						1.computer,watch数据变化执行
+						2.watch:{
+							fName:{
+								return: 1;
+							}
+						}
+					</pre>
+				</li>
+				<li>
+					<h2>vue生命周期</h2>
+					<pre>
+						1.vue实例在某个时间点自动执行的函数
+						2.beforCleate,cleated,beforeMpunt,mounted,beforeDestory.destoryed,beforeUpdata,updated
+					</pre>
+				</li>
+				<li>
+					<h2>vue的模板语法</h2>
+					<pre>
+						1.v-text v-html {{}}
+						2.v-text 转义输出<div></div>
+					</pre>
+				</li>
+				<li>
+					<h2>5.计算属性</h2>
+					<pre>
+						computed:{
+							fullName:{
+								get:functon(){
+									
+								},
+								set:function(){
+									return "改变fullName时执行"
+								}
+							}
+						}
+					</pre>
+				</li>
+				<li>
+					<h2>6.vue中的样式绑定</h2>
+					<pre>
+						A.:class="{class1:action}" data:{action:true}
+						B.:class="[action]" data:{action:'class1'}
+						C.style="{action}" data:{action:{color:red}}
+						D:style="[action]" data:{action:{color:red}}
+					</pre>
+				</li>
+				<li>
+					<h2>7.vue条件渲染</h2>
+					<pre>
+						A.v-if="1" v-else-if="1" v-else v-show="1" dispaly:none
+						B.input key="name"
+					</pre>
+				</li>
+				<li>
+					<h2>8.列表渲染</h2>
+					<pre>
+						1.v-for="(item,key,index) in data";
+						2.push,pop,shify,unshift,引用 app.list={}
+						3.vue.set(list,"address","beijing")
+						4,vue.$set
+						5.<templte v-for="item in list"></templte>
+					</pre>
+				</li>
+			</ul>
+		</div>
+		<!--起步 end-->
+		<!--组件 start-->
+		<div class="inner" id="inner2">
+			<h1>组件</h1>
+			<ul>
+				<li>
+					<h2>1.组件的使用细节</h2>
+					<pre>
+						1.table,ol,ul,select is="row"
+						2.组件里面的data:{fullName:function(){return 2}}
+						3.引用 ref="hello" this.$refs.hello.innerHtml
+						4.$.emit()
+					</pre>
+				</li>
+				<li>
+					<h2>2.父子组件传值</h2>
+					<pre>
+						1.父亲可以传值给组件，组件不可以直接改变父亲的值
+						2.父亲传组件
+						A.:cont="1" 数字1 cont="1" 字符串
+						B.props:[cont]
+						C.template:'<div>{{cont}}</div>'
+						3.组件传父亲
+						A.template:"<div @click="c1"></div>";
+						B.methods:{
+							c1:function(){
+								$.emit(c2,2);
+							}
+						C.<tem @c2="c3"></tem>
+						D.父亲methods:{
+							c3:function(index){
+								
+							}
+						}
+						}
+						
+					</pre>
+				</li>
+				<li>
+					<h2>3.组件参数矫正与非props特性</h2>
+					<pre>
+						A.props:[content:String]
+						B.props:[content:[String,Number]]
+						C.type:String,required:true,default:'默认值'，validator:function(val){验证方法})
+						D.非props特性，Dom显示，不能传值到组件
+						<a  href="4-3.html" target="_blank">4-3小练习</a>
+					</pre>
+				</li>
+				<li>
+					<h2>4.组件原生绑定</h2>
+					<pre>
+						@click.native="handCLickDiv"
+						<a href="4-4.html" target="_blak">4-4小练习</a>
+					</pre>
+				</li>
+				<li>
+					<h2>5.非父子间的传值</h2>
+					<pre>
+						A.BUS/总线/发布订阅/观察者模式
+						B.Vue.prototype.bus=new Vue()
+						C.this.bus.$emit('change',data)
+						D.mouted:function(){
+							this.bus.$on("change",function(val){
+								
+							})
+						}
+						<a href="4-5.html" target="_blak">非父子间的传值</a>
+					</pre>
+				</li>
+				<li>
+					<h2>6.vue中使用插槽slot</h2>
+					<pre>
+						A.<child><div></div></child>,
+						B.template:<slot></slot>
+						C.<slot>默认值</slot>
+						D.<slot name="header"></slot>
+						<a href="4-6.html" target="_blak">vue中使用插槽slot</a>
+					</pre>
+				</li>
+				<li>
+					<h2>7.vue中的作用域</h2>
+					<pre>
+						A.<tem1 slot-scope="prpos"></tem1>
+						<a href="4-7.html" target="_blak">vue中的作用域</a>
+					</pre>
+				</li>
+				<li>
+					<h2>动态组件与v-once</h2>
+					<pre>
+						A.<component :is="type"></component>
+						B.template:v-once
+						<a href="4-8.html" target="_blak">动态组件与v-once</a>
+					</pre>
+				</li>
+			</ul>
+		</div>
+		<!--组件 end-->
+		<!--动画start-->
+		<div class="inner" id="inner3">
+			<h1>动画</h1>
+			<ul>
+				<li>
+					<h2>1.vuezhong css的动画</h2>
+					<pre>
+						<xmp>
+							A.<transition></transition>
+							B.name="fade"
+							C..fade-enter,.fade-leave-to{opacity:0}
+						 	D..fade-enter-active,.fade-leave-active{transition:opacity 3s;}
+						</xmp>
+						<a href="5-1.html">vuezhong css的动画</a>
+					</pre>
+				</li>
+				<li>
+					<h2>2.在vue中使用animate css库</h2>
+					<pre>
+						A.@keyFrames css3动画,reverse反向，
+						@keyFrames in{
+							0%{
+								transform:scale(0)
+							},
+							50%{
+								transform:scale(1.5)
+							},
+							100%{
+								transform:scale(1)
+							}
+						}
+						.fade-enter-active{
+							transform-origin: left center;
+							animation:in 3s;
+						}
+						.fade-leave-active{
+							transform-origin: left center;
+							animation:in 3s reverse; 
+						}
+						B.enter-active-class="animated swing"
+						<a href="5-2.html">在vue中使用animate css库</a>
+					</pre>
+				</li>
+				<li>
+					<h2>3.在vue中同时使用过度和动画</h2>
+					<pre>
+						A.appear appear-actived-class=""一开始的动画
+						C.type="transition"
+						D.:duration:'1000',:duration:{enter:5000,leave:1000}
+						E.同时使用过度和动画
+						enter-active-class="animated swing fade-enter-active" 
+						leave-active-class="animated tada fade-leave-active"
+						<a href="5-3.html">在vue中同时使用过度和动画</a>
+					</pre>
+				</li>
+				<li>
+					<h2>4.vue中的Js动画与velocity.js的结合</h2>
+					<pre>
+						A.@berfore-enter="beforeEnter",@enter="",@afert-enter=""
+						B.methods beforeEnter:function
+						C.velocity(el,{opacity:1}.{duration:1000,complete:done})
+						<a href="5-4.html">vue中的Js动画与velocity.js的结合</a>
+					</pre>
+				</li>
+				<li>
+					<h2>5.vue中多个元素和组件的过度</h2>
+					<pre>
+						A.key
+						B.mode="out-in"
+						<a href="5-5.html">vue中多个元素和组件的过度</a>
+					</pre>
+				</li>
+				<li>
+					<h2>6.vue中的列表过度</h2>
+					<pre>
+						<xml>
+							A.<transition-group></transition-group>
+						</xml>
+						B.name :key=""
+						<a href="5-6.html">vue中的列表过度</a>
+					</pre>
+				</li>
+				<li>
+					<h2>7.vue中的动画封装</h2>
+					<a href="5-7.html">vue中的动画封装</a>
+				</li>
+			</ul>
+		</div>
+		<!--动画end-->
+		<!--准备start-->
+		<div class="inner" id="inner4">
+			<h1>准备</h1>
+			<ul>
+				<li>
+					<h2>1.项目环境准备</h2>
+					<pre>
+						A.node -v
+						B.npm -v
+						C.码云
+						D.npm install -g @vue/cli
+						E.vue create my-project
+						F.一些选项
+					</pre>
+				</li>
+				<li>
+					<h2>2.项目代码结构介绍</h2>
+					<pre>
+						A.main.js->App.Vue
+						B.router->index.js 路由的配置
+						C.新建的page
+						D.page里面的component
+					</pre>
+				</li>
+				<li>
+					<h2>3.vue中单文件的路由</h2>
+					<pre>
+						A.在router->index.js 路由的配置
+						B.export default{name:'header'}
+					</pre>
+				</li>
+				<li>
+					<h2>4.多页应用与单页应用</h2>
+					<pre>
+						A.单页应用-路由
+						B.单页应用的优点，首屏快，seo效果好，跳转慢
+						C.多应用相反
+					</pre>
+				</li>
+				<li>
+					<h2>项目代码初始化</h2>
+					<pre>
+						A.public->index.html修改content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+						B.引入reset.css font-size: 50px;1/2rem,border.css
+						C.npm install fastclick --save解决点击延迟
+						D.inconfont字体库
+						E.引入stylus npm install stylus --save
+						F.styles与@，新建vue.config.js，修改node_modules>@vue>cli-serve>lib>config>base.js修改alias
+					</pre>
+				</li>
+			</ul>
+		</div>
+		<!--准备end-->
+		<!--首页开发start-->
+		<div class="inner" id="inner5">
+			<h1>首页开发</h1>
+			<ul>
+				<li>
+					<h2>1.首页header区域开打</h2>
+					<pre>
+						A.新建home目录->home.vue
+						B.新建component->header.vue
+						C.在home,引入header,import HomeHeader from './component/header'
+						D.components: {HomeHeader}
+						E.<home-header></home-header>
+						F.<style lange="stylus" scoped></style>
+						H.新建varibles.styl,引入@import '~styles/varibles'
+						I.background:$bgColor;
+					</pre>
+				</li>
+				<li>
+					<h2>2.inconfont使用</h2>
+				</li>
+				<li>
+					<h2>3.首页轮播</h2>
+					<pre>
+						A.npm install vue-Awesom-Swiper --save
+					</pre>
+				</li>
+				<li>
+					<h2>4.图标区域的布局</h2>
+					<pre>
+						
+					</pre>
+				</li>
+				<li>
+					<h2>5.图标区域的逻辑实现</h2>
+					<pre>
+						A.省略号--引入mixins.styl
+					</pre>
+				</li>
+				<li>
+					<h2>6.推荐组件</h2>
+					<pre>
+						
+					</pre>
+				</li>
+				<li>
+					<h2>7.周末游组件</h2>
+					<pre>
+						
+					</pre>
+				</li>
+				<li>
+					<h2>8.aja获得数据</h2>
+					<pre>
+						A.import axios from 'axios'
+						B.axios.get('').then((){})
+						C.数据public mock index.json
+						D.修改'/api',vue.config.js  proxy
+					</pre>
+				</li>
+				<li>
+					<h2>9.首页父子组件的数据传递</h2>
+				</li>
+			</ul>
+		</div>
+		<!--首页开发endt-->
+		<div id="side_nav">
+			<h2>导航</h2>
+			<p>起步</p>
+			<p>组件</p>
+			<p>动画</p>
+			<p>项目准备</p>
+		</div>
+	</div>
+	
+	<script src="../../introducing/js/jquery-3.3.1.min.js"></script>
+	<script>
+		var pageOn="notes";
+	</script>
+	<script src="../../main/js/main.js"></script>
+	</body>
+</html>
+||||||| .r0
+=======
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../../main/css/main.css">
+		<link rel="icon" href="../../main/images/home.ico" type="image/gif" /> 
+	</head>
+	<body>
+		<a target="_blank" href="vue_foundation.html">Vue基础</a>
+		<a target="_blank" href="vue_shuttle .html">Vue穿梭框</a>
+	</body>
+</html>
+>>>>>>> .r11

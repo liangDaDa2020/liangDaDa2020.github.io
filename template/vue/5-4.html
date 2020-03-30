@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../../staticimages/vue/vue.js"></script>
+		<script src="../../introducing/js/velocity/velocity.js"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div>
+				<transition 
+					name="fade" 
+					@before-enter="beforeEnter"
+					@enter="enter1"
+					@after-enter="afterEnter"
+					@before-leave="beforeLeave"
+					@leave="leave"
+					@after-leave="afetLeave"
+				>
+					<div v-show="show">hello word</div>
+				</transition>
+			</div>
+			<input value="change" @click="change" type="button"/>
+		</div>
+		<script type="text/javascript">
+			var app=new Vue({
+				el:'#app',
+				data:{
+					'show':1
+				},
+				methods:{
+					'change':function(){
+						this.show=this.show==1?0:1;
+					},
+					'beforeEnter':function(el){
+						//el.style.color="red";
+						el.style.opacity=0
+						console.log(el.style.opacity)
+					},
+					'enter1':function(el,done){
+						/* setTimeout(function(){
+							el.style.color="green";
+						},2000)
+						setTimeout(function(){
+							done();
+						},3000) */
+						Velocity(el,{opacity:1},{duration:1000,complete:done})
+					},
+					'afterEnter':function(el){
+						console.log(el.style.opacity)
+						//el.style.color="black";
+					},
+					'beforeLeave':function(el){
+						el.style.opacity=1;
+					},
+					'leave':function(el,done){
+						Velocity(el,{opacity:0},{duration:1000,complete:done})
+					},
+					'afetLeave':function(el){
+						
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

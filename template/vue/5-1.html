@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>4-4</title>
+		<script src="../../staticimages/vue/vue.js"></script>
+		<style>
+			.fade-enter,.fade-leave-to{opacity: 0;}
+			.fade-enter-active,.fade-leave-active{transition:opacity 3s;}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<transition name="fade">
+				<div v-show="show">
+					hello word
+				</div>
+			</transition>
+			<input type="button" value="change" @click="change"/>
+		</div>
+		<script>
+			var app=new Vue({
+				el:"#app",
+				data:{
+					'show':1,
+				},
+				methods:{
+					'change':function(){
+						this.show=this.show==1?0:1;
+					}
+				}
+			})
+		</script>	
+	</body>
+</html>

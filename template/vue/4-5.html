@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>4-4</title>
+		<script src="../../staticimages/vue/vue.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<tem1></tem1>
+			<tem2></tem2>
+		</div>
+		<script>
+			Vue.prototype.bus=new Vue();
+			var tem1=Vue.component('tem1',{
+				template:'<div @click="c1">hello word</div>',
+				methods:{
+					'c1':function(){
+						this.bus.$emit('c2','tem1');
+					}
+				},
+				mounted:function(){
+					this.bus.$on("c2",function(val){
+						alert(val);
+					})
+				}
+			})
+			var tem2=Vue.component('tem2',{
+				template:'<div>hello word</div>',
+				mounted:function(){
+					this.bus.$on("c2",function(val){
+						alert("val");
+					})
+				}
+			})
+			var app=new Vue({
+				el:"#app",
+				component:tem1,
+				data:{
+					
+				},
+				methods:{
+					'handClickDaiv':function(){
+						alert("asdgdfh");
+					}
+				}
+			})
+		</script>	
+	</body>
+</html>
