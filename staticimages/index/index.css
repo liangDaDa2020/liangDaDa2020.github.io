@@ -42,7 +42,8 @@ body{height:100%;margin:0;}
 #index .works .w-item img{width:200px;}
 #index .works .w-item p{text-align: center;margin-top:20px;}
 
-#index .contact{margin:0 auto;width: 230px;overflow: hidden;}
+#index .contact{margin:0 auto;width: 354px;overflow: hidden;}
+#index .contact li{overflow: hidden;}
 #index .contact p{line-height:20px;margin-bottom:10px;text-align: left;color:#787978;font-size: 16px;}
 #index .contact .p-l{width: 88px;display: block;float: left;text-align: right;margin-right: 5px;}
 #index .contact .p-r{float: left;text-align: left;}
