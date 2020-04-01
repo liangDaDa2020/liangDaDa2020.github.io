@@ -6,4 +6,5 @@ $(function(){
 		var height=$(window).height();
 		$("body").animate({'scrollTop':height*index}) 
 	})
+	
 })

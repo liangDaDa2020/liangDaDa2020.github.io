@@ -40,7 +40,7 @@ body{height:100%;margin:0;}
 #index .works{overflow: hidden;}
 #index .works .w-item{margin:10px;width:205px;color: #0E4a9b;float: left;}
 #index .works .w-item img{width:200px;}
-#index .works .w-item p{text-align: center;margin-top:20px;}
+#index .works .w-item p{text-align: center;margin-top:20px;color:#E87E04}
 
 #index .contact{margin:0 auto;width: 354px;overflow: hidden;}
 #index .contact li{overflow: hidden;}
