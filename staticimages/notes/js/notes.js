@@ -9,6 +9,9 @@ $(function(){
 				move(height);
 			})
 		})
+		/* $(window).bind('scroll', function(){
+			getAnchor()
+		}); */
 		function move(height){
 			$('html, body').stop().animate({ scrollTop:height }, 'slow',function(){
 						$(window).scroll(function() {

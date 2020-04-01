@@ -10,9 +10,10 @@ body{height:100%;margin:0;}
 #index .left-point li{cursor:pointer;width: 8px;height: 8px;margin-top: 50px;background-color: #019875;border-radius: 100%;}
 #index .left-point li.active{background-color: #fff;border: 1px solid #019875;}
 
-#index .main{height:500%;+height:2500px;overflow: hidden;position: relative;}
-#index .item{height:20%;+height:600px;width:900px;margin:0 auto;box-sizing: border-box;padding-top:50px;overflow: hidden;}
-#index .itemTop{text-align: center;color:#2c3e50;font-size:30px;line-height:30px;margin:20px auto;font-weight: normal;}
+#index .main{height:100%;padding-top:0px;overflow: hidden;position: absolute;}
+#index .main-l{height:500%;+height:2500px;position: absolute;}
+#index .item{height:20%;+height:600px;width:900px;margin:0 auto;box-sizing: border-box;overflow: hidden;}
+#index .itemTop{text-align: center;color:#2c3e50;font-size:30px;line-height:30px;margin:70px auto;font-weight: normal;}
 #index .itemTop .after{background-color: #E87E04;height:4px;width:70px;display: block;margin:10px auto 0;}
 
 #index .photo{width:200px;height:200px;overflow: hidden;margin:0 auto}
