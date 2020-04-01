@@ -50,7 +50,7 @@ $(function(){
 		  callback && callback()
 		  clearTimeout(timer)
 		  candu=true
-	  }, time || 1000)
+	  }, time || 300)
 	}
 	if (navigator.userAgent.indexOf("Firefoox") != -1) {
 		$(window).on('DOMMouseScroll',onMouseWheel);
@@ -58,7 +58,7 @@ $(function(){
 		$(window).on('mousewheel',function(event){
 			throttle(function(){
 				onMouseWheel(event)
-			},1000)
+			},500)
 		});
 	}
 	
