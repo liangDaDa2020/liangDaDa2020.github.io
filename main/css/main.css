@@ -20,7 +20,7 @@ table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-colo
 
 
 /*公共样式*/
-.main{width:1190px;margin:0px auto;}
+.main{width:1190px;margin:0 auto;padding-top:50px;}
 .fl{float:left;}
 .fr{float:left}
 .clear{zoom:1}
@@ -37,8 +37,8 @@ table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-colo
 
 /*header*/
 #header{position: fixed;background:#019875;width:100%;left:0}
-#header .nav{width:1160px;height:50px;overflow:hidden;margin:0px auto;}
-#header h1{float:left;color:#084D08;line-height: 50px;font-size: 26px;margin-right:40px}
+#header .nav{width:1160px;height:50px;overflow:hidden;margin:0px auto;position: relative;}
+#header .logo{float:left;height:50px;}
 #header .nav-btn{float:left;overflow: hidden;}
 #header .nav a{background:none;font-size:14px;color:#fff;line-height:20px;margin-top: 13px;text-align: center;padding:0px 20px;.width: 80px\9;.padding:0px\9;float:left;display:block}
 
