@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="../../main/css/main.css">
+		<link rel="stylesheet" href="../../staticimages/project/throttle/css.css">
+	</head>
+	<body>
+		<div class="main">
+			<xmp>
+				var candu=true;
+				function throttle (callback, time) {
+				  if(!candu){
+					return false;
+				  }
+				  candu=false;
+				  timer=setTimeout(function(){
+					  callback && callback()
+					  clearTimeout(timer)
+					  candu=true
+				  }, time || 300)
+				}
+			</xmp>
+		</div>
+		<script src="../../introducing/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../../staticimages/project/throttle/js.js"></script>
+	</body>
+</html>
