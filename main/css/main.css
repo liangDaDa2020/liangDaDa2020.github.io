@@ -7,7 +7,7 @@ img{border:0px;vertical-align:top}
 table{border-collapse:clooapse;}
 input,textarea{outline:none;}
 textarea{resize:none;overflow:auto;}
-body{font-szie:12px;font-family:"simhei"}
+body{font-szie:12px;font-family:"simhei";}
 table{border-collapse:collapse;}
 table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-color: #666666;}
 
@@ -39,7 +39,7 @@ table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-colo
 .trangle_down{width:0px;height:0px;overflow: hidden;border-left:4px solid transparent;border-right: 4px solid transparent;border-top:4px solid red;_border-left:4px solid #fff;_border-right:4px solid #fff;}
 
 /*header*/
-#header{position: fixed;background:#019875;width:100%;left:0}
+#header{position: fixed;background:#019875;left:0px;right:0px;top:0px}
 #header .nav{width:1160px;height:50px;overflow:hidden;margin:0px auto;position: relative;}
 #header .logo{float:left;height:50px;}
 #header .nav-btn{float:left;overflow: hidden;}
