@@ -1,7 +1,3 @@
 #main{position: relative;}
 .inner{position: relative;}
 pre{}
-
-/*side_nav 侧边导航*/
-#side_nav{background:#deefff}
-#side_nav p{cursor:pointer;}
