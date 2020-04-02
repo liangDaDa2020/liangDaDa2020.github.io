@@ -10,7 +10,7 @@ body{height:100%;margin:0;}
 #index .left-point li{cursor:pointer;width: 8px;height: 8px;margin-top: 50px;background-color: #019875;border-radius: 100%;}
 #index .left-point li.active{background-color: #fff;border: 1px solid #019875;}
 
-#index .main{height:100%;padding-top:0px;overflow: hidden;position: absolute;}
+#index .main{padding-top:0px;overflow: hidden;position: absolute;width:100%;height:100%;+height:600px;top:0px}
 #index .main-l{height:500%;width:100%;+height:2500px;position: absolute;}
 #index .item{height:20%;+height:600px;width:900px;margin:0 auto;box-sizing: border-box;overflow: hidden;}
 #index .itemTop{text-align: center;color:#2c3e50;font-size:30px;line-height:30px;margin:70px auto;font-weight: normal;}
@@ -41,7 +41,8 @@ body{height:100%;margin:0;}
 #index .works{overflow: hidden;}
 #index .works .w-item{margin:10px;width:205px;color: #0E4a9b;float: left;}
 #index .works .w-item img{width:200px;}
-#index .works .w-item p{text-align: center;margin-top:20px;color:#E87E04}
+#index .works .w-item .w-title{text-align: center;margin-top:20px;color:#E87E04}
+#index .works .w-item .w-detial{color: #333;font-size: 14px;text-align: center;margin-top: 5px;}
 
 #index .contact{margin:0 auto;width: 354px;overflow: hidden;}
 #index .contact li{overflow: hidden;}
