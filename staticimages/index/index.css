@@ -40,7 +40,8 @@ body{height:100%;margin:0;}
 
 #index .works{overflow: hidden;}
 #index .works .w-item{margin:10px;width:205px;color: #0E4a9b;float: left;}
-#index .works .w-item img{width:200px;}
+#index .works .w-img-box{width:200px;height:171px;overflow: hidden;}
+#index .works .w-item img{width:100%;}
 #index .works .w-item .w-title{text-align: center;margin-top:20px;color:#E87E04}
 #index .works .w-item .w-detial{color: #333;font-size: 14px;text-align: center;margin-top: 5px;}
 
