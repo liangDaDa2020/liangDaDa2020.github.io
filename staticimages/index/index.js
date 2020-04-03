@@ -61,5 +61,42 @@ $(function(){
 			},500)
 		});
 	}
-	
+})
+//轮播
+$(function(){
+	var itemL=$("#index .works .w-item").length;
+	var unitL=225;
+	var mMax=unitL*(itemL-4);
+	var mMin=0;
+	var moveL=0;
+	var timer;
+	auto()
+	$("#index .works .work-left").click(function(){
+		moveL=moveL-unitL;
+		moveL=move(moveL);
+	})
+	$("#index .works .work-right").click(function(){
+		moveL=moveL+unitL;
+		moveL=move(moveL);
+	})
+	$("#index .works-l,#index .works .iconfont").hover(function(){
+		clearTimeout(timer);
+	},function(){
+		auto();
+	})
+	function auto(){
+		timer=setInterval(function(){
+			moveL=moveL+unitL;
+			moveL=move(moveL);
+		},3000)
+	}
+	function move(moveL){
+		if(moveL>mMax){
+			moveL=0;
+		}else if(moveL<mMin){
+			moveL=mMax;
+		}
+		$("#index .works-l").stop().animate({ marginLeft:(moveL*-1) }, 'slow');
+		return moveL;
+	}
 })

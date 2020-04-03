@@ -38,7 +38,11 @@ body{height:100%;margin:0;}
 #index .experience .e-time{width:150px;height:150px;z-index:2;position: absolute;left:0px;right:0px;top:0px;margin:0px auto;border: 1px solid #eee;background: #fff;border-radius:100%;}
 #index .experience .e-time>p{text-align:center;color: #787978;font-size: 16px;line-height: 30px;margin:30px auto;}
 
-#index .works{overflow: hidden;}
+#index .works{overflow: hidden;height: 250px;position: relative;}
+#index .works .iconfont{cursor:pointer;font-weight: bold;position: absolute;top: 71px;font-size: 16px;color: #fff; background: #eb8f3d;width: 24px;height: 70px;line-height: 70px;text-align: center;}
+#index .works .work-left{left:0px;}
+#index .works .work-right{right:0px;}
+#index .works-l{width: 2000px;height: 250px;;}
 #index .works .w-item{margin:10px;width:205px;color: #0E4a9b;float: left;}
 #index .works .w-img-box{width:200px;height:171px;overflow: hidden;}
 #index .works .w-item img{width:100%;}
