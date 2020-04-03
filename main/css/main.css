@@ -10,7 +10,7 @@ textarea{resize:none;overflow:auto;}
 body{font-szie:12px;font-family:"simhei";}
 table{border-collapse:collapse;}
 table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-color: #666666;}
-
+*{padding:0px;margin:0px;}
 /*布局样式*/
 #header{z-index:99}
 .main_warp{width:1190px;margin:0px auto;}
@@ -23,11 +23,11 @@ table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-colo
 
 
 /*公共样式*/
-.main{width:1190px;margin:0 auto;padding-top:50px;}
+.main{width:1190px;margin:0 auto;padding-top:50px;position: relative;top:0px}
 .fl{float:left;}
 .fr{float:left}
 .clear{zoom:1}
-.clear:after{content:"";display:block;clear:both;}
+.clear .after{clear:both;}
 
 /*常用样式*/
 .ellipsis1{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -39,12 +39,34 @@ table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-colo
 .trangle_down{width:0px;height:0px;overflow: hidden;border-left:4px solid transparent;border-right: 4px solid transparent;border-top:4px solid red;_border-left:4px solid #fff;_border-right:4px solid #fff;}
 
 /*header*/
-#header{position: fixed;background:#019875;left:0px;right:0px;top:0px}
-#header .nav{width:1160px;height:50px;overflow:hidden;margin:0px auto;position: relative;}
+#header{position: fixed;background:#019875;left:0px;right:0px;top:0px;height:50px;overflow: hidden;}
+#header .nav{width:1160px;height:50px;margin:0px auto;position: relative;}
 #header .logo{float:left;height:50px;}
-#header .nav-btn{float:left;overflow: hidden;}
-#header .nav a{background:none;font-size:14px;color:#fff;line-height:20px;margin-top: 13px;text-align: center;padding:0px 20px;.width: 80px\9;.padding:0px\9;float:left;display:block}
+#header .nav-btn{float:left;width:600px;overflow: hidden;}
+#header .nav a{
+	cursor:pointer;
+	font-size:14px;
+	color:#fff;
+	line-height:50px;
+	text-align: center;
+	padding:0px 20px;
+	*padding:0px;
+	*width:80px;
+	float:left;
+	display:block;
+	position: relative;
+	background: #019875;
+}
+#header .nav .active{background:#5cccb3}
+/* #header .nav p .after{display: block;background:#fff;} */
+/* #header .nav .active .after{
+	height:2px;
+	width:50px;
+	position: absolute;
+	top: 0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	display: block;
+	} */
 
-#header .nav a .after{-moz-transition:width .5s;-webkit-transition:width .5s;content: "";background-color: #fff;height:0;width:0;display: block;margin:0 auto;} /* Safari and Chrome */
-#header .nav .active .after{height:2px;width:50%;}
-#header .nav a:hover .after{height:2px;width:50%;}
