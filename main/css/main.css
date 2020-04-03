@@ -43,30 +43,7 @@ table td,table th{border-width: 1px;padding: 8px;border-style: solid;border-colo
 #header .nav{width:1160px;height:50px;margin:0px auto;position: relative;}
 #header .logo{float:left;height:50px;}
 #header .nav-btn{float:left;width:600px;overflow: hidden;}
-#header .nav a{
-	cursor:pointer;
-	font-size:14px;
-	color:#fff;
-	line-height:50px;
-	text-align: center;
-	padding:0px 20px;
-	*padding:0px;
-	*width:80px;
-	float:left;
-	display:block;
-	position: relative;
-	background: #019875;
-}
-#header .nav .active{background:#5cccb3}
-/* #header .nav p .after{display: block;background:#fff;} */
-/* #header .nav .active .after{
-	height:2px;
-	width:50px;
-	position: absolute;
-	top: 0px;
-	left:0px;
-	right:0px;
-	bottom:0px;
-	display: block;
-	} */
-
+#header .nav a{cursor:pointer;font-size:14px;color:#fff;line-height:25px;text-align: center;padding:10px 20px 15px;*padding:10px 0px 0px;*width:80px;float:left;display:block;position: relative;background: #019875;overflow: hidden;}
+#header .nav a .after{height:0px;width:0px;display: block;margin:0px auto;background:#fff;*display: none;}
+#header .nav .active{*text-decoration: underline;}
+#header .nav .active .after{height:2px;width:50%;}
