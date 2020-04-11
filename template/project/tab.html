@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#tab div{border:1px solid #333;width:100px;height:100px;display:none;}
+			#tab .active-tab{background:red;}
+		</style>
+	</head>
+	<body>
+		<div id="tab">
+			<input class="active-tab" type="button" checked value="1"/>
+			<input value="2" type="button"/>
+			<input value="3" type="button"/>
+			<div style="display:block">
+				11111
+			</div>
+			<div>
+				2222
+			</div>
+			<div>
+				3333
+			</div>
+		</div>
+		<script>
+			window.onload=function(){
+				var a=new Tab();
+				a.init();
+			}
+			function Tab(){
+				this.tab=document.getElementById("tab");
+				this.inputTab=tab.getElementsByTagName("input");
+				this.divTab=tab.getElementsByTagName("div");
+			}
+			Tab.prototype.show=function(obj){
+				var index=obj.index;
+				for(var i=0;i<this.inputTab.length;i++){
+					this.inputTab[i].className='';
+					this.divTab[i].style.display="none";
+				}
+				obj.className="active-tab";
+				this.divTab[index].style.display="block";
+			}
+			Tab.prototype.init=function(){
+				var This=this;
+				console.log(This);
+				for(var i=0;i<this.inputTab.length;i++){
+					this.inputTab[i].index=i;
+					this.inputTab[i].onclick=function(){
+						This.show(this);
+					}
+				}
+			}
+			
+		</script>
+	</body>
+</html>
