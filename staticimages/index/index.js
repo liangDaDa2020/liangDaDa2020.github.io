@@ -1,7 +1,9 @@
 //全屏上下滚动
 $(function(){
 	var oDiv = $('#index .main-l');
+	$("#index .itemTop").eq(0).addClass("animated fadeInDown");
 	function move(indexOn){
+		$("#index .itemTop").removeClass("animated fadeInDown")
 		var num=$("#index .left-point li").length;
 			num=num-1;
 		if(indexOn<0){
@@ -13,7 +15,13 @@ $(function(){
 		var unitHeight=Math.floor($("#index .item").height());
 		var move=indexOn*unitHeight*-1;
 		$(window).unbind('scroll');
-		$(".main-l").stop().animate({ marginTop:move }, 'slow');
+		$(".main-l").stop().animate({ marginTop:move }, 'slow',function(){
+			$("#index .itemTop").eq(indexOn).addClass("animated fadeInDown");
+			if(indexOn==2){
+				$("#index .e-detial-l .animated").addClass("bounceInLeft");
+				$("#index .e-detial-r .animated").addClass("bounceInRight")
+			}
+		});
 	}
 	$("#index .left-point li").click(function(){
 		var index=$(this).index();

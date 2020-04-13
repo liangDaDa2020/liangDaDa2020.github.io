@@ -27,7 +27,7 @@ body{height:100%;margin:0;}
 #index .skill .skill-title{color: #E87E04;font-size: 16px;text-align: center;margin:32px 0 10px}
 
 #index .experience{position: relative;}
-#index .experience li{overflow: hidden;position: relative;z-index:2}
+#index .experience li{overflow: hidden;position: relative;z-index:2;}
 #index .experience .after{z-index:1;position: absolute;top: 0; bottom: 0;left: 50%;width: 2px;margin-left: -1px;background-color: #eee;}
 #index .experience .e-detial{width:40%;min-height:180px;margin-top:20px}
 #index .experience .e-detial-l{float:left;text-align:right}
@@ -35,7 +35,7 @@ body{height:100%;margin:0;}
 #index .experience .e-titel{color:#E87E04;font-size: 16px;line-height:30px;}
 #index .experience .e-work{color:#E87E04;font-size: 14px;}
 #index .experience .e-responsible{color:#787978;font-size: 14px;line-height: 20px;}
-#index .experience .e-time{width:150px;height:150px;z-index:2;position: absolute;left:0px;right:0px;top:0px;margin:0px auto;border: 1px solid #eee;background: #fff;border-radius:100%;}
+#index .experience .e-time{width:150px;height:150px;z-index:2;position: absolute;left:50%;top:0px ;margin-left:-75px;border: 1px solid #eee;background: #fff;border-radius:100%;}
 #index .experience .e-time>p{text-align:center;color: #787978;font-size: 16px;line-height: 30px;margin:30px auto;}
 
 #index .works{overflow: hidden;height: 250px;position: relative;}
